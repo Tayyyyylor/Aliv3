@@ -1,0 +1,16 @@
+.cards {
+   cursor: pointer;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        border: 5px solid black;
+        padding: 1rem;
+        width: 350px;
+        height: 150px;
+    }
+
+    &__title {
+        margin: 0;
+    }
+}

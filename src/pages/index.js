@@ -1,7 +1,6 @@
+import HomepageTemplate from "@/components/templates/Homepage/Homepage"
 
+const Homepage = () => <HomepageTemplate />
 
-export default function Home() {
-  return (
-   <></>
-  )
-}
+export default Homepage
+
