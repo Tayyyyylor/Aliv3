@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Title({title}) {
+export default function Title({label, className}) {
   return (
-    <h2>{title}</h2>
+    <div className={className}>
+    <h2 className='title'>{label}</h2>
+    </div>
   )
 }

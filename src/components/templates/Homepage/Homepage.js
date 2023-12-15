@@ -1,12 +1,14 @@
-import Header from '@/components/layouts/header/Header'
-// import Slider from '@/components/molecules/slider/Slider'
 import React from 'react'
+import nefaste from "../../../../public/nefaste.jpg"
+import Image from 'next/image'
 
 export default function HomepageTemplate() {
+  // const cld = new Cloudinary({cloud: {cloudName: 'dna8sibxu'}});
   return (
     <>
-    <Header />
-    {/* <Slider /> */}
+    
+    <Image src={nefaste} alt='' className='homepage'/>
+    
     </>
   )
 }

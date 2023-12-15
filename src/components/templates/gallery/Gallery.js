@@ -1,17 +1,30 @@
+// import { getPhotos } from '@/pages/api/FlickrAPI';
+// import Image from 'next/image';
 import React from 'react'
+
 
 export default function GalleryTemplate() {
 
-    getInitialProps = async (ctx) => {
-        const res = await fetch('https://www.flickr.com/services/rest/?method=flickr.test.echo&name=Alibeniris')
-        const json = await res.json()
-        return { json }
-    }
-    console.log('json', json)
-    console.log('res', res)
+  // const [photos, setPhotos] = useState([]);
 
+  // useEffect(() => {
+  //   const fetchPhotos = async () => {
+  //     try {
+  //       const userId = 'Alibeniris';
+  //       const userPhotos = await getPhotos(userId);
+  //       setPhotos(userPhotos);
+  //     } catch (error) {
+  //       console.error('Error fetching photos:', error);
+  //     }
+  //   };
+
+  //   fetchPhotos();
+  // }, []);
 
   return (
-    <div>GalleryTemplate</div>
+    <>
+    <main>
+    </main>
+    </>
   )
 }
