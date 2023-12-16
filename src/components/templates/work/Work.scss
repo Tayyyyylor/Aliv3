@@ -1,6 +1,23 @@
 .work {
+
+    margin: 0 auto;
+    &__card {
     display: flex;
     flex-wrap: wrap;
-    padding: 8rem;
+    justify-content: center;
+    padding: 4rem;
     gap: 2rem;
+    
+    }
+
+    &__modal {
+        width: 90%;
+        height: 70svh;
+        position: absolute;
+        z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    }
 }
+

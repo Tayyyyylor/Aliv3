@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default function DefaultButton() {
+export default function DefaultButton({className, type, label, onClick}) {
   return (
-    <div>DefaultButton</div>
+    <div className={className}>
+    <button type={type} className='defaultbutton' onClick={onClick}>
+    {label}
+    </button>
+    </div>
   )
 }

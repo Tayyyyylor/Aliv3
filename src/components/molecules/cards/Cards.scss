@@ -1,16 +1,48 @@
 .cards {
-   cursor: pointer;
-
-    &__container {
-        display: flex;
-        flex-direction: column;
-        border: 5px solid black;
-        padding: 1rem;
-        width: 350px;
-        height: 150px;
-    }
-
+    display: inline-flex;
+    cursor: pointer;
+    flex-direction: column;
+    width: 25%;
+  
     &__title {
         margin: 0;
+    font-family: mainFont;
+    font-size: 14px;
+    margin-top: 2px;
+
+    }
+
+    &__img {
+        object-fit: "contain"
+    }
+
+    &__subtitle {
+        margin: 0;
+        color: black;
+        font-family: textFont;
+        font-size: 13px;
+    }
+
+    &__text {
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+white-space: nowrap;
+letter-spacing: -1px
+    }
+}
+
+.cards:hover {
+    animation: 3s ease-in 1s infinite reverse both running scale;
+
+}
+
+@keyframes scale {
+    from{ 
+        transform: scale(1);
+    }
+
+    to {
+       transform: scale(1.15);
     }
 }

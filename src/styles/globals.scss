@@ -8,11 +8,24 @@
 @use '../components/templates/Homepage/Homepage.scss' as *;
 @use '../components/templates/contact/ContactTemplate.scss' as *;
 @use '../components/templates/work/Work.scss' as *;
+@use '../components/molecules/modal/Modal.scss' as *;
+@use '../components/atoms/buttons/defaultButton/DefaultButton.scss' as *;
+@use "./variables" as *;
 
 
 @font-face {
     font-family: mainFont;
-    src: url("../fonts/mainFont.ttf");
+    src: url("../fonts/MontserratBold-p781R.otf");
+  }
+@font-face {
+    font-family: textFont;
+    src: url("../fonts/MontserratThin-MVY6x.otf");
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
 body {
@@ -21,5 +34,19 @@ body {
     padding: 0;
     font-family: mainFont;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* couleur d'arrière-plan semi-transparente */
+    z-index: 1; /* assure que l'overlay est au-dessus du reste du contenu */
+  }
+
+  .yellow-text {
+    color: $yellow;
+  }
 
 
