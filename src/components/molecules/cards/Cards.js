@@ -1,20 +1,20 @@
-import Image from 'next/image'
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import { motion } from "framer-motion"
 
 
-export default function Cards({src, alt, label, onClick}) {
+export default function Cards({src, alt, label, subtitle, onClick}) {
+
+
   return (
-   <motion.section 
+   <section 
    className='cards'
-   whileHover={{ scale: 1.1 }}
-   whileTap={{ scale: 0.9 }}
    onClick={onClick}
    >
-    <div className='cards__container'>
-    <Image src={src} alt={alt}/>
+    <img src={src} alt={alt} className='cards__img' />
+    <div>
+    <h3 className='cards__title'>{label}</h3>
+    <p className='cards__subtitle'>{subtitle}</p>
     </div>
-    <h2 className='cards__title'>{label}</h2>
-   </motion.section>
+   </section>
   )
 }

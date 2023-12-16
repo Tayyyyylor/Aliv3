@@ -29,7 +29,7 @@ export default function Logo() {
         src={isMobile ? logoNoirMobile : logoNoir}
         width={isMobile ? 100 : 200}
         alt="ali logo"
-        priority={false}
+        priority={true}
       />
     </Link>
   );
