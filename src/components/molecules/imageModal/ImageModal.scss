@@ -1,0 +1,25 @@
+.imageModal {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+background-color: white;
+position: relative;
+
+&__title {
+    margin-top: 23px;
+}
+
+    &__video {
+        flex: 3;
+    }
+
+    &__button {
+        font-size: 60px;
+        position: absolute;
+    top: 0;
+    left: 30px;
+    }
+}
+

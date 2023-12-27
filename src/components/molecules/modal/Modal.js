@@ -1,4 +1,4 @@
-import DefaultButton from '@/components/atoms/buttons/defaultButton/DefaultButton'
+import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import React from 'react'
 
 export default function Modal({ title, desc, onClick}) {
@@ -7,7 +7,7 @@ export default function Modal({ title, desc, onClick}) {
     <div className='modal__text'>
         <h2>{title}</h2>
         <p>{desc}</p>
-        <DefaultButton  onClick={onClick} className='modal__button' label='close'/>
+        <CloseButton onClick={onClick} className='modal__button'/>
     </div>
     <div className='modal__video'>
     </div>

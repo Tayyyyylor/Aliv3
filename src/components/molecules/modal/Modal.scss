@@ -7,10 +7,10 @@ background-color: red;
         flex: 1;
         background-color: black;
         display: flex;
-
+        position: relative;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         padding: 1rem;
     }
 
@@ -19,7 +19,10 @@ background-color: red;
     }
 
     &__button {
-        cursor: pointer;
+        font-size: 60px;
+        position: absolute;
+    top: 0;
+    left: 30px;
     }
 }
 

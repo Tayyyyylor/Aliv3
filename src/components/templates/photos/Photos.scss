@@ -1,0 +1,36 @@
+.photos {
+
+    margin: 0 auto;
+    width: 1200px;
+
+
+    &__card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem;
+    gap: 5rem;
+
+    &_content {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+  
+    }
+
+    &__modal {
+        display: block;
+        width: 90%;
+        height: 70svh;
+        position: absolute;
+        z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__none {
+    display: none;
+  }
+    }
+}
+

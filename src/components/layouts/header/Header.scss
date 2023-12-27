@@ -1,9 +1,9 @@
 .header {
     display: flex;
-    align-items: center;
     background-color: transparent;
-    justify-content: space-between;
     padding: 1rem;
     z-index: 19;
+    gap: 5rem;
     position: relative;
+    align-items: flex-end;
 }
