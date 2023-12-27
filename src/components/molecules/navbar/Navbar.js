@@ -22,12 +22,12 @@ function Navbar() {
         <nav className={`nav-mobile ${menuIsOpen ? "active" : "" }`}
         style={{ background:  "var(--yellow)", 
                 transition: "all 0.5s ease-in-out"}}>
-          <Link href="/work" className="navbar-link margin-top"
+          <Link href="/films" className="navbar-link margin-top"
 >
-           work
+           film
           </Link>
-          <Link href="/galerie" className="navbar-link">
-            galerie
+          <Link href="/photos" className="navbar-link">
+            image
           </Link>
           <Link href="/contact" className="navbar-link">
             contact
@@ -35,12 +35,12 @@ function Navbar() {
         </nav>
       ) : (
         <nav className="nav-desktop">
-          <Link href="/work" className="navbar-link" >
-            work
+          <Link href="/films" className="navbar-link" >
+            film
           </Link>
-          <Link href="/galerie" className="navbar-link"
+          <Link href="/photos" className="navbar-link"
 >
-            galerie
+            image
           </Link>
           <Link href="/contact" className="navbar-link"
 >

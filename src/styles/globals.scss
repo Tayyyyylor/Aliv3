@@ -7,9 +7,12 @@
 @use '../components/molecules/cards/Cards.scss' as *;
 @use '../components/templates/Homepage/Homepage.scss' as *;
 @use '../components/templates/contact/ContactTemplate.scss' as *;
-@use '../components/templates/work/Work.scss' as *;
+@use '../components/templates/film/Film.scss' as *;
+@use '../components/templates/photos/Photos.scss' as *;
 @use '../components/molecules/modal/Modal.scss' as *;
 @use '../components/atoms/buttons/defaultButton/DefaultButton.scss' as *;
+@use "../components/atoms/buttons/closeButton/CloseButton.scss" as *;
+@use "../components/molecules/imageModal/ImageModal.scss" as *;
 @use "./variables" as *;
 
 
@@ -20,6 +23,10 @@
 @font-face {
     font-family: textFont;
     src: url("../fonts/MontserratThin-MVY6x.otf");
+  }
+@font-face {
+    font-family: logo;
+    src: url("../fonts/MontserratBlack-ZVK6J.otf");
   }
 
   * {
@@ -47,6 +54,10 @@ body {
 
   .yellow-text {
     color: $yellow;
+  }
+
+  a {
+    text-decoration: none;
   }
 
 

@@ -1,8 +1,7 @@
 .cards {
-    display: inline-flex;
+    display: flex;
     cursor: pointer;
     flex-direction: column;
-    width: 25%;
   
     &__title {
         margin: 0;
@@ -12,9 +11,7 @@
 
     }
 
-    &__img {
-        object-fit: "contain"
-    }
+ 
 
     &__subtitle {
         margin: 0;
