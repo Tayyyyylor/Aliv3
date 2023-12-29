@@ -1,17 +1,29 @@
 .modal {
-    height: 100%;
     display: flex;
-    color: white;
-background-color: red;
+    color: black;
+    width: 100%;
     &__text {
         flex: 1;
-        background-color: black;
+        background-color: white;
         display: flex;
         position: relative;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
+        align-items: flex-start;
         padding: 1rem;
+        gap: 2rem;
+    }
+
+    &__title {
+        margin-top: 70px;
+    }
+
+    &__subtitle {
+        font-family: lightFont;
+    }
+
+    &__desc {
+        font-family: thinFont;
+        text-align: justify;
     }
 
     &__video {

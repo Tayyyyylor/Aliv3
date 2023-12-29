@@ -80,7 +80,7 @@ export default function FilmTemplate() {
           <div className={showModal ? 'work__modal' : "work__modal__none"}>
 {showModal && selectedCardData && (
 
-<Modal  onClick={handleClose} title={selectedCardData.label} desc={selectedCardData.desc}/>
+<Modal  onClick={handleClose} title={selectedCardData.label} desc={selectedCardData.desc} subtitle={selectedCardData.subtitle}/>
 )
 
 }

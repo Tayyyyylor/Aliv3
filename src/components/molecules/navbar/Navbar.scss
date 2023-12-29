@@ -4,7 +4,7 @@
     position: absolute;
     z-index: 10;
     top: 9px;
-    left: 20px;
+    right: 20px;
     height: 50px;
     width: 35px;
     border: none;
@@ -72,7 +72,7 @@ nav.active {
     text-transform: uppercase;
 }
 .navbar-link:hover {
-    color: $yellow
+    animation: 3s ease-in 1s infinite reverse both running scale;
 }
 
 .nav-desktop {
@@ -103,5 +103,15 @@ nav.active {
 .navbar-link {
     color: black;
     
+}
+
+@keyframes scale {
+    from{ 
+        transform: scale(1);
+    }
+
+    to {
+       transform: scale(1.15);
+    }
 }
 }

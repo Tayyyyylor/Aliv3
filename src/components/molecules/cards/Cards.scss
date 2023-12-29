@@ -1,11 +1,9 @@
 .cards {
-    display: flex;
     cursor: pointer;
-    flex-direction: column;
-  
+    width: 24%;
     &__title {
         margin: 0;
-    font-family: mainFont;
+    font-family: boldFont;
     font-size: 14px;
     margin-top: 2px;
 
@@ -16,7 +14,7 @@
     &__subtitle {
         margin: 0;
         color: black;
-        font-family: textFont;
+        font-family: thinFont;
         font-size: 13px;
     }
 
@@ -29,17 +27,3 @@ letter-spacing: -1px
     }
 }
 
-.cards:hover {
-    animation: 3s ease-in 1s infinite reverse both running scale;
-
-}
-
-@keyframes scale {
-    from{ 
-        transform: scale(1);
-    }
-
-    to {
-       transform: scale(1.15);
-    }
-}
