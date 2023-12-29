@@ -1,17 +1,20 @@
 .work {
 
-    margin: 0 auto;
-    width: 1200px;
+    width: 100%;
+    min-height: 90vh;
+    align-items: center;
+    display: flex;
 
 
     &__card {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4rem;
-    gap: 2rem;
-
+      display: flex;
+      gap: 2rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
    &_content {
-    width: 335px
+    width: 100%;
    }
     
     }

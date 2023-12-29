@@ -17,11 +17,19 @@
 
 
 @font-face {
-    font-family: mainFont;
+    font-family: boldFont;
     src: url("../fonts/MontserratBold-p781R.otf");
   }
 @font-face {
-    font-family: textFont;
+    font-family: mediumFont;
+    src: url("../fonts/MontserratMedium-lgZ6e.otf");
+  }
+@font-face {
+    font-family: lightFont;
+    src: url("../fonts/MontserratLight-6YemM.otf");
+  }
+@font-face {
+    font-family: thinFont;
     src: url("../fonts/MontserratThin-MVY6x.otf");
   }
 @font-face {
@@ -39,7 +47,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    font-family: mainFont;
+    font-family: boldFont;
 }
 
 .overlay {

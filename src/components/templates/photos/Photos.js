@@ -15,34 +15,44 @@ export default function PhotosTemplate() {
             alt:"",
             label:"MA NANA - YARO",
             subtitle:"PHOTO PLATEAU",
+            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
         },
         {
             src:"/photosYouns.jpg",
             alt:"",
             label:"DONNANT DANNANT - YOUNSS",
             subtitle:"PHOTO PLATEAU",
+            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
+
         },
         {
             src:"/imageLeCoq.jpg",
             alt:"caca",
             label:"LSC T1000 - LE COQ SPORTIF",
             subtitle:"PHOTO PLATEAU",
+            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
+
         },
         {
             src:"/photosYaroInterim.jpg",
             alt:"caca",
             label:"INTERIMAIRE - YARO",
             subtitle:"PHOTO PLATEAU",
+            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
+
         },
         {
             src:"/northfake.jpg",
             alt:"caca",
             label:"INTERIMAIRE - YARO",
             subtitle:"PHOTO PLATEAU",
+            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
+
         },
        
     ]
 
+    console.log('selectCardData', selectedCardData)
 
     const handleClick = (cardIndex) => {
     setShowModal(true)
@@ -69,7 +79,7 @@ export default function PhotosTemplate() {
           <div className={showModal ? 'photos__modal' : "photos__modal__none"}>
 {showModal && selectedCardData && (
 
-<ImageModal  onClick={handleClose} label={selectedCardData.label} desc={selectedCardData.desc}/>
+<ImageModal  onClick={handleClose} label={selectedCardData.label} desc={selectedCardData.desc} gallery={selectedCardData.gallery} />
 )
 
 }

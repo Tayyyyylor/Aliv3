@@ -6,7 +6,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 8rem;
     height: 80vh; 
+}
+
+&__img {
+    cursor: pointer;
 }
 }
