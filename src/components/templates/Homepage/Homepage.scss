@@ -1,6 +1,15 @@
-.homepage {
-   position: relative;
+@use "../../../styles/variables" as *;
+
+.intro {
+
+    &__button {
+        color: black;
+    }
 }
+
+
+
+@media screen and (min-width: $lg) {
 
 .intro {
     position: fixed;
@@ -41,4 +50,6 @@
     100% {
         opacity: .5;
     }
+}
+
 }
