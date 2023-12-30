@@ -20,7 +20,7 @@ function Navbar() {
     <>
       {isMobile ? (
         <nav className={`nav-mobile ${menuIsOpen ? "active" : "" }`}
-        style={{ background:  "var(--yellow)", 
+        style={{ background: "white", 
                 transition: "all 0.5s ease-in-out"}}>
           <Link href="/films" className="navbar-link margin-top"
 >

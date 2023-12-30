@@ -2,12 +2,12 @@
 import React from 'react'
 
 
-export default function Cards({src, alt, label, subtitle, onClick, className}) {
+export default function Cards({src, alt, label, subtitle, onClick, className, sizeClassName}) {
 
 
   return (
    <section 
-   className='cards'
+   className={`cards ${sizeClassName}`}
    onClick={onClick}
    >
     <img src={src} alt={alt} className={className} />
