@@ -1,7 +1,7 @@
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import React from 'react'
 
-export default function Modal({ title, desc, onClick, subtitle}) {
+export default function Modal({ title, desc, onClick, subtitle, src}) {
   return (
     <section className='modal'>
     <div className='modal__text'>
@@ -13,8 +13,8 @@ export default function Modal({ title, desc, onClick, subtitle}) {
         <CloseButton onClick={onClick} className='modal__button'/>
     </div>
     <div className='modal__video'>
-    <video className='video'  preload='auto' muted autoPlay controls>
-  <source src="/reeelWebm.webm" type="video/webm" />
+    <video className='modal__video_vid'  preload='auto' muted autoPlay controls>
+  <source src={src} type="video/webm" />
   </video>
     </div>
     </section>

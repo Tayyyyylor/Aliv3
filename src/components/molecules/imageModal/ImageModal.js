@@ -12,7 +12,7 @@ export default function ImageModal({ label,  onClick, gallery}) {
         <CloseButton onClick={onClick} className='imageModal__button'/>
         <div className='imageModal__img_container'>
         {gallery.map((src, index) => (
-          <Image key={index} src={src} width={300} height={300} alt={`Photo ${index}`} className='imageModal__img' />
+          <Image key={index} src={src} width="300"  sizes="100vw" height="300" alt={`Photo ${index}`} className='imageModal__img' />
           ))}
           </div>
     </section>

@@ -1,3 +1,5 @@
+@use "../../../styles/variables" as *;
+
 .contact {
    display: flex;
    justify-content: center;
@@ -6,11 +8,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
     height: 80vh; 
+}
+
+&__img_container {
+display: flex;
+gap: 8rem;
+flex-direction: column;
+@media screen and (min-width: $lg) {
+    flex-direction: row;
+}
 }
 
 &__img {
     cursor: pointer;
+}
+
+&__mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+&__alert {
+    font-size: 16px;
+    font-family: lightFont;
 }
 }

@@ -12,41 +12,53 @@ export default function PhotosTemplate() {
 
     const cardsData = [
         {
-            src:"/photosYaroManana.jpg",
-            alt:"",
-            label:"MA NANA - YARO",
-            subtitle:"PHOTO PLATEAU",
-            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
-        },
-        {
-            src:"/photosYouns.jpg",
-            alt:"",
-            label:"DONNANT DANNANT - YOUNSS",
-            subtitle:"PHOTO PLATEAU",
-            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
-
-        },
-        {
-            src:"/imageLeCoq.jpg",
+            src:"https://res.cloudinary.com/dna8sibxu/image/upload/v1703958818/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/insta_LE_COQ-5_phfzwe.jpg",
             alt:"caca",
             label:"LSC T1000 - LE COQ SPORTIF",
-            subtitle:"PHOTO PLATEAU",
+            subtitle:"PHOTO SET",
+            gallery: [
+            "https://res.cloudinary.com/dna8sibxu/image/upload/v1703958833/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/KAINF_LE_COQ_xi2s6g.jpg",
+             "https://res.cloudinary.com/dna8sibxu/image/upload/v1703958831/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/insta_4_LE_COQ_zpz8xc.jpg",
+             "https://res.cloudinary.com/dna8sibxu/image/upload/v1703958831/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/insta_LE_COQ_fadyry.jpg",
+             "https://res.cloudinary.com/dna8sibxu/image/upload/v1703958831/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/insta_2_LE_COQ-4_fsd9vr.jpg",
+             "https://res.cloudinary.com/dna8sibxu/image/upload/v1703958824/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/SHYNA_LE_COQ_dsqqyk.jpg",
+             "https://res.cloudinary.com/dna8sibxu/image/upload/v1703958823/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/insta_bikers_LE_COQ-4_x6rmxu.jpg",
+             "/photosYaroManana.jpg",
+             "/photosYaroManana.jpg",
+             "/photosYaroManana.jpg",
+             "/photosYaroManana.jpg",
+             "/photosYaroManana.jpg",
+             "/photosYaroManana.jpg",
+            ]
+
+        },
+        {
+            src:"https://res.cloudinary.com/dna8sibxu/image/upload/v1703958820/2%20YARO%20-%20INTERIMAIRE/MKZ02027_zgbuac.jpg",
+            alt:"caca",
+            label:"INTERIMAIRE - YARO",
+            subtitle:"PHOTO SET",
+            gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
+        },
+        {
+            src:"https://res.cloudinary.com/dna8sibxu/image/upload/v1703958830/3%20YOUNSS%20-%20DONNANT%20DONNANT/YOUNSS_INSTA-13_r8mdmd.jpg",
+            alt:"",
+            label:"DONNANT DANNANT - YOUNSS",
+            subtitle:"PHOTO SET",
             gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
 
         },
         {
-            src:"/photosYaroInterim.jpg",
-            alt:"caca",
-            label:"INTERIMAIRE - YARO",
-            subtitle:"PHOTO PLATEAU",
+            src:"https://res.cloudinary.com/dna8sibxu/image/upload/v1703958833/4%20YARO%20-%20MA%20NANA/Ma_nana_tournage_wetransfert-9_qwakye.jpg",
+            alt:"",
+            label:"MA NANA - YARO",
+            subtitle:"PHOTO SET",
             gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
-
         },
         {
-            src:"/northfake.jpg",
+            src:"https://res.cloudinary.com/dna8sibxu/image/upload/v1703958834/5%20NORTH%20FAKE/Andrea_et_Juliette_master-5_udgcuq.jpg",
             alt:"caca",
-            label:"INTERIMAIRE - YARO",
-            subtitle:"PHOTO PLATEAU",
+            label:"NORTHFAKE",
+            subtitle:"PHOTO SET",
             gallery: ["/photosYaroManana.jpg", "/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg","/photosYaroManana.jpg",]
 
         },

@@ -40,7 +40,7 @@ useEffect(() => {
         <div className='intro'>
           <div className='intro__video'>
           <video className='video'  preload='auto' muted autoPlay controls>
-  <source src="/reeelWebm.webm" type="video/webm" />
+  <source src="https://res.cloudinary.com/dna8sibxu/video/upload/v1703956903/Intro/reeelWebm_amf758.webm" type="video/webm" />
   </video>
           </div>  
               <DefaultButton label="Explore now ▶" onClick={handleExplore} className="intro__button"/>

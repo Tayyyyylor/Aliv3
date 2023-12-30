@@ -41,7 +41,9 @@
     width: 100%;
     background-color: black;
 
-  
+  @media screen and (min-width: $xlg) {
+    height: 100vh;
+  }
 }
 
 @keyframes clignotte {
