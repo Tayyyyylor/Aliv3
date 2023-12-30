@@ -15,12 +15,12 @@ export default function FilmTemplate() {
      
     const cardsData = [
         {
-            src: "Ma_nana_tournage_wetransfert-10_kcdai2",
+            src: "https://res.cloudinary.com/dna8sibxu/image/upload/v1703963148/Intro/Capture_d_e%CC%81cran_2023-12-30_a%CC%80_20.04.54_uhg36a.png",
             video:"",
             alt:"",
-            label:"CACA",
-            subtitle:"CACA",
-            desc: "Une jeune fille, face aux dilemmes de l'avenir, passe par la danse pour trouver sa voie, lui offrant ainsi la clarté nécessaire pour définir son destin",
+            label:"Intro",
+            subtitle:"Compilation 2023",
+            desc: "Full compilation of the Year.",
         },
         {
             src:"https://res.cloudinary.com/dna8sibxu/image/upload/v1703960750/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_VIGNETTE_porvex_16-9_ybr4x1.jpg",
