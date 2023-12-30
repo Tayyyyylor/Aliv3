@@ -48,6 +48,12 @@ position: relative;
         }
     }
 
+    &__video_vid {
+        @media screen and (min-width: $lg) {
+            width: 100%;
+        }
+    }
+
     &__button {
         font-size: 60px;
         position: absolute;

@@ -12,6 +12,8 @@
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.14.0",
     "axios": "^1.6.2",
+    "clipboard": "^2.0.11",
+    "dotenv": "^16.3.1",
     "framer-motion": "^10.16.16",
     "next": "13.5.6",
     "next-cloudinary": "^5.16.0",
