@@ -1,3 +1,4 @@
+import Backdrop from '@/components/atoms/backdrop/Backdrop';
 import Cards from '@/components/molecules/cards/Cards'
 import ImageModal from '@/components/molecules/imageModal/ImageModal';
 import React, { useState } from 'react'
@@ -73,7 +74,7 @@ export default function PhotosTemplate() {
                 )}
                 <div className='photos__card'  >
       {cardsData.map((card, index) => (
-          <Cards key={index} src={card.src} alt={card.alt} label={card.label} subtitle={card.subtitle} onClick={() => handleClick(index)} className='photos__card_content' />
+          <Cards key={index} src={card.src} alt={card.alt} label={card.label} sizeClassName="photos__card_size"subtitle={card.subtitle} onClick={() => handleClick(index)} className='photos__card_content' />
           ))}
           </div>
           <div className={showModal ? 'photos__modal' : "photos__modal__none"}>
@@ -84,6 +85,11 @@ export default function PhotosTemplate() {
 
 }
           </div>
+          {showModal && (
+<Backdrop onCancel={handleClose} />
+            
+          )
+          }
           </main>
         
   )

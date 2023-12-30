@@ -1,9 +1,19 @@
+@use "../../../styles/variables" as *;
+
 .modal {
     display: flex;
     color: black;
+overflow-y: auto; 
+position: relative;
+
+@media screen and (max-width: $md) {
+    height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
     &__text {
-        flex: 1;
         background-color: white;
         display: flex;
         position: relative;
@@ -11,6 +21,10 @@
         align-items: flex-start;
         padding: 1rem;
         gap: 2rem;
+        @media screen and (min-width: $lg) {
+            flex: 1;
+            
+        }
     }
 
     &__title {
@@ -27,7 +41,11 @@
     }
 
     &__video {
-        flex: 3;
+
+        @media screen and (min-width: $lg) {
+            
+            flex: 3;
+        }
     }
 
     &__button {

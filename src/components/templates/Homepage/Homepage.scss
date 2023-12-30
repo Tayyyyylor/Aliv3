@@ -9,7 +9,6 @@
 
 
 
-@media screen and (min-width: $lg) {
 
 .intro {
     position: fixed;
@@ -17,10 +16,12 @@
     left: 0;
     width: 100%;
     z-index: 20;
+    height: 100%;
     color: white; /* Couleur du texte, ajustez selon votre design */
 
     &__video {
       width: 100%;
+     
 
     }
 
@@ -38,6 +39,11 @@
 
 .video {
     width: 100%;
+    background-color: black;
+
+    @media screen and (min-width: $xlg) {
+      height: 100vh;
+    }
 }
 
 @keyframes clignotte {
@@ -50,6 +56,4 @@
     100% {
         opacity: .5;
     }
-}
-
 }
