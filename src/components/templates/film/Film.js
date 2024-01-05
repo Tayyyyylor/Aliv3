@@ -56,7 +56,7 @@ export default function FilmTemplate() {
               desc={selectedCardData.desc}
               subtitle={selectedCardData.subtitle}
               src={selectedCardData.video}
-              srcMp4={selectedCardData.video}
+              srcMp4={selectedCardData.srcMp4}
             />
           </>
         )}
