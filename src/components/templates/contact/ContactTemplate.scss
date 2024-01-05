@@ -13,7 +13,7 @@
 
   &__img_container {
     display: flex;
-    gap: 8rem;
+    gap: 6rem;
     flex-direction: column;
     @media screen and (min-width: $lg) {
       flex-direction: row;

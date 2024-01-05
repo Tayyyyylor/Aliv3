@@ -40,6 +40,8 @@ export default function FilmTemplate() {
             src={card.src}
             alt={card.alt}
             label={card.label}
+            gif={card.gif}
+            gifMp4={card.gifMp4}
             subtitle={card.subtitle}
             sizeClassName="work__card_size"
             onClick={() => handleClick(index)}
@@ -53,7 +55,7 @@ export default function FilmTemplate() {
             <Modal
               onClick={handleClose}
               title={selectedCardData.label}
-              desc={selectedCardData.desc}
+              desc={<div dangerouslySetInnerHTML={{ __html: selectedCardData.desc.replace(/\n/g, '<br/>') }} />}
               subtitle={selectedCardData.subtitle}
               src={selectedCardData.video}
               srcMp4={selectedCardData.srcMp4}

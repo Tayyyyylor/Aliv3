@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import instagram from '../../../../public/instagram.png'
 import mail from '../../../../public/Mail.png'
+import behance from '../../../../public/BEHANCE.png'
 
 export default function ContactTemplate() {
   const [alert, setAlert] = useState(false)
@@ -18,6 +19,9 @@ export default function ContactTemplate() {
 
   const handleInstaClick = () => {
     window.location.href = 'https://www.instagram.com/alibeniris/'
+  }
+  const handleBehanceClick = () => {
+    window.location.href = 'https://www.behance.net/alisays1/'
   }
   return (
     <main className="contact">
@@ -42,6 +46,14 @@ export default function ContactTemplate() {
             />
             {alert && <p className="contact__alert">Email copied.</p>}
           </div>
+            <Image
+              src={behance}
+              alt=""
+              width={150}
+              height={150}
+              className="contact__img"
+              onClick={handleBehanceClick}
+            />
         </div>
       </div>
     </main>
