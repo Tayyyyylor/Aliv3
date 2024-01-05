@@ -1,7 +1,7 @@
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import React, { useEffect, useState } from 'react'
 
-export default function Modal({ title, desc, onClick, subtitle, src }) {
+export default function Modal({ title, desc, onClick, subtitle, src, srcMp4 }) {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -41,9 +41,11 @@ export default function Modal({ title, desc, onClick, subtitle, src }) {
                 className="modal__video_vid"
                 preload="auto"
                 muted
+                autoPlay
                 controls
               >
                 <source src={src} type="video/webm" />
+                <source src={srcMp4} type="video/mp4" />
               </video>
             </div>
             <div className="modal__text">
