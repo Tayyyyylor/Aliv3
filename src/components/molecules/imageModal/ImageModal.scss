@@ -1,38 +1,44 @@
+@use '../../../styles/variables' as *;
+
 .imageModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  background-color: white;
+
+  padding: 2rem;
+  position: relative;
+  height: 90vh; /* 90% de la hauteur de la vue */
+  overflow-y: auto;
+  &__title {
+    margin-top: 23px;
+  }
+
+  &__img_container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: black;
-background-color: white;
-
-padding: 2rem;
-position: relative;
-height: 90vh; /* 90% de la hauteur de la vue */
-overflow-y: auto; 
-&__title {
-    margin-top: 23px;
-}
-
-
-&__img_container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Trois colonnes égales */
     gap: 10px; /* Espace entre les images */
     margin-top: 30px;
-}
-
-&__img {
-}
-
-    &__video {
-        flex: 3;
+    @media screen and (min-width: $lg) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Trois colonnes égales */
+      grid-auto-rows: minmax(100px, auto);
     }
+  }
 
-    &__button {
-        font-size: 60px;
-        position: absolute;
+  &__img {
+    max-width: 100%;
+  }
+
+  &__video {
+    flex: 3;
+  }
+
+  &__button {
+    font-size: 60px;
+    position: absolute;
     top: 0;
     left: 30px;
-    }
+  }
 }
-

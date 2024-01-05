@@ -1,38 +1,38 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .contact {
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
 
-&__container {
+  &__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; 
-}
+    height: 80vh;
+  }
 
-&__img_container {
-display: flex;
-gap: 8rem;
-flex-direction: column;
-@media screen and (min-width: $lg) {
-    flex-direction: row;
-}
-}
+  &__img_container {
+    display: flex;
+    gap: 8rem;
+    flex-direction: column;
+    @media screen and (min-width: $lg) {
+      flex-direction: row;
+    }
+  }
 
-&__img {
+  &__img {
     cursor: pointer;
-}
+  }
 
-&__mail {
+  &__mail {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-}
+  }
 
-&__alert {
+  &__alert {
     font-size: 16px;
     font-family: lightFont;
-}
+  }
 }

@@ -1,118 +1,113 @@
-@use "../../../styles/_variables.scss" as *;
+@use '../../../styles/_variables.scss' as *;
 
 .nav-toggler {
-    position: absolute;
-    z-index: 10;
-    top: 9px;
-    right: 20px;
-    height: 38px;
-    width: 35px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
+  position: absolute;
+  z-index: 10;
+  top: 9px;
+  right: 20px;
+  height: 38px;
+  width: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
 }
 .line {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: black;
-    transition: transform 0.3s ease-out;
-    opacity: 0.1s ease-out;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: black;
+  transition: transform 0.3s ease-out;
+  opacity: 0.1s ease-out;
 }
 
 .l1 {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .l1.active {
-    transform: translateY(0px) rotate(135deg);
-  
-   
+  transform: translateY(0px) rotate(135deg);
 }
 
 .l2.active {
-    opacity: 0;
+  opacity: 0;
 }
 .l3 {
-    transform: translateY(10px);
+  transform: translateY(10px);
 }
 .l3.active {
-    transform: translateY(0px) rotate(-135deg);
+  transform: translateY(0px) rotate(-135deg);
 }
-
 
 .nav-mobile {
-    position: absolute;
-    width: 40%;
-    min-height: 100vh;
-    top: 74px;
-    left: 0;
-    display: flex;
-    z-index: 10;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    background: white;
-    transform: translateX(-100%);
-    transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+  position: absolute;
+  width: 40%;
+  min-height: 100vh;
+  top: 74px;
+  left: 0;
+  display: flex;
+  z-index: 10;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  background: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
 }
 nav.active {
-    transform: translate(0);
+  transform: translate(0);
 }
 
 .navbar-link {
-    color: black;
-    font-size: 16px;
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: black;
+  font-size: 16px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .navbar-link:hover {
-    animation: 3s ease-in 1s infinite reverse both running scale;
+  animation: 3s ease-in 1s infinite reverse both running scale;
 }
 
 .nav-desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-block-end: 0.25em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-block-end: 0.25em;
 }
 
 .margin-top {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .sub-nav-container {
-    flex-direction: column;
-    background-color: red;
-    padding: 1rem;
+  flex-direction: column;
+  background-color: red;
+  padding: 1rem;
 }
 
-@media screen and (min-width:1024px) {
-
-.nav-toggler {
+@media screen and (min-width: 1024px) {
+  .nav-toggler {
     display: none;
-}
+  }
 
-.navbar-link {
+  .navbar-link {
     color: black;
-    
-}
+  }
 
-@keyframes scale {
-    from{ 
-        transform: scale(1);
+  @keyframes scale {
+    from {
+      transform: scale(1);
     }
 
     to {
-       transform: scale(1.15);
+      transform: scale(1.15);
     }
-}
+  }
 }
