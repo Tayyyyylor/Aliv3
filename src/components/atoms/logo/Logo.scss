@@ -5,6 +5,8 @@
   text-transform: uppercase;
   color: black;
   font-size: 20px;
+  position: relative;
+  z-index: 11;
   @media screen and (min-width: $lg) {
     font-size: 32px;
   }

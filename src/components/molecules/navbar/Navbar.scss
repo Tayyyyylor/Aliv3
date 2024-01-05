@@ -45,21 +45,21 @@
 
 .nav-mobile {
   position: absolute;
-  width: 40%;
-  min-height: 100vh;
+  width: 100%;
   top: 74px;
   left: 0;
   display: flex;
   z-index: 10;
+  padding-bottom: 10px;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   background: white;
-  transform: translateX(-100%);
+  transform: translateY(-200%);
   transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
 }
 nav.active {
-  transform: translate(0);
+  transform: translateY(-14px);
 }
 
 .navbar-link {
