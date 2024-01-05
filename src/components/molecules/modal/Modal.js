@@ -25,6 +25,7 @@ export default function Modal({ title, desc, onClick, subtitle, src }) {
               className="modal__video_vid"
               preload="auto"
               muted
+              autoPlay
               controls
             >
               <source src={src} type="video/webm" />
@@ -40,7 +41,6 @@ export default function Modal({ title, desc, onClick, subtitle, src }) {
                 className="modal__video_vid"
                 preload="auto"
                 muted
-                autoPlay
                 controls
               >
                 <source src={src} type="video/webm" />
