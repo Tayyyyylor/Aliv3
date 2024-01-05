@@ -3,6 +3,7 @@
 .cards {
   width: 100%;
   cursor: pointer;
+  max-height: 100%;
   @media screen and (min-width: $lg) {
     width: 100%;
   }
@@ -26,5 +27,9 @@
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: -1px;
+  }
+
+  &__video {
+    width: 100%;
   }
 }
