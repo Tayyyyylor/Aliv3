@@ -1,34 +1,30 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .cards {
+  width: 100%;
+  cursor: pointer;
+  @media screen and (min-width: $lg) {
     width: 100%;
-    cursor: pointer;
-    @media screen and (min-width: $lg) {
-        width: 100%;
-    }
-    &__title {
-        margin: 0;
+  }
+  &__title {
+    margin: 0;
     font-family: boldFont;
     font-size: 14px;
     margin-top: 2px;
+  }
 
-    }
+  &__subtitle {
+    margin: 0;
+    color: black;
+    font-family: thinFont;
+    font-size: 13px;
+  }
 
- 
-
-    &__subtitle {
-        margin: 0;
-        color: black;
-        font-family: thinFont;
-        font-size: 13px;
-    }
-
-    &__text {
-        margin: 0;
-        text-overflow: ellipsis;
-        overflow: hidden;
-white-space: nowrap;
-letter-spacing: -1px
-    }
+  &__text {
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: -1px;
+  }
 }
-

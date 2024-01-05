@@ -1,6 +1,6 @@
 import FilmTemplate from '@/components/templates/film/Film'
 import React from 'react'
 
-    const Filmpage = () => <FilmTemplate />
+const Filmpage = () => <FilmTemplate />
 
-    export default Filmpage
+export default Filmpage

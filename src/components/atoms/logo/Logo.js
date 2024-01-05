@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Logo() {
   // const [isMobile, setIsMobile] = useState(false);
@@ -21,7 +21,7 @@ export default function Logo() {
 
   return (
     <Link href="/">
-     <h1 className="logo"> ali bensaali</h1>
+      <h1 className="logo"> ali bensaali</h1>
     </Link>
-  );
+  )
 }

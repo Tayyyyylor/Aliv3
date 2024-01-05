@@ -1,45 +1,39 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .intro {
-
-    &__button {
-        color: black;
-    }
+  &__button {
+    color: black;
+  }
 }
 
-
-
-
 .intro {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  height: 100%;
+  color: white; /* Couleur du texte, ajustez selon votre design */
+
+  &__video {
     width: 100%;
-    z-index: 20;
-    height: 100%;
-    color: white; /* Couleur du texte, ajustez selon votre design */
+  }
 
-    &__video {
-      width: 100%;
-     
-
-    }
-
-    &__button {
-        position: absolute;
-        z-index: 21;
-        display: flex;
-        bottom: 10%;
-        width: 100%;
-        color: white;
-        justify-content: center;
-        animation: 3s ease-in-out infinite clignotte;
-    }
+  &__button {
+    position: absolute;
+    z-index: 21;
+    display: flex;
+    bottom: 10%;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    animation: 3s ease-in-out infinite clignotte;
+  }
 }
 
 .video {
-    width: 100%;
-    background-color: black;
+  width: 100%;
+  background-color: black;
 
   @media screen and (min-width: $xlg) {
     height: 100vh;
@@ -47,13 +41,13 @@
 }
 
 @keyframes clignotte {
-    0% {
-        opacity: .5;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: .5;
-    }
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }

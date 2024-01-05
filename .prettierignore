@@ -1,0 +1,14 @@
+# Ignore artifacts:
+build
+coverage
+
+# Next output folders
+.next
+out
+back
+
+# Ignore all HTML files:
+*.html
+
+Dockerfile
+Dockerfile.pace

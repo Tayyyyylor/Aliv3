@@ -1,64 +1,71 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .modal {
-    display: flex;
-    color: black;
-overflow-y: auto; 
-position: relative;
+  display: flex;
+  color: black;
+  overflow-y: auto;
+  position: relative;
 
-@media screen and (max-width: $md) {
-    height: 100vh;
+  @media screen and (max-width: $md) {
     width: 100%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+
+  &__text {
+    background-color: white;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 2rem;
+    @media screen and (min-width: $lg) {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    @media screen and (min-width: $lg) {
+      margin-top: 70px;
+    }
+  }
+
+  &__subtitle {
+    font-family: lightFont;
+  }
+
+  &__desc {
+    font-family: thinFont;
+    text-align: justify;
+    margin-bottom: 20px;
+    @media screen and (min-width: $lg) {
+      margin: 0;
+    }
+  }
+
+  &__video {
+    background: white;
+    @media screen and (min-width: $lg) {
+      flex: 3;
+    }
+  }
+
+  &__video_vid {
+    width: 100%;
+    @media screen and (min-width: $lg) {
+    }
+  }
+
+  &__button {
+    font-size: 60px;
+    background-color: white;
+    @media screen and (min-width: $lg) {
+      font-size: 60px;
+      position: absolute;
+      top: 0;
+      left: 30px;
+    }
+  }
 }
-
-    &__text {
-        background-color: white;
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-        gap: 2rem;
-        @media screen and (min-width: $lg) {
-            flex: 1;
-            
-        }
-    }
-
-    &__title {
-        margin-top: 70px;
-    }
-
-    &__subtitle {
-        font-family: lightFont;
-    }
-
-    &__desc {
-        font-family: thinFont;
-        text-align: justify;
-    }
-
-    &__video {
-
-        @media screen and (min-width: $lg) {
-            
-            flex: 3;
-        }
-    }
-
-    &__video_vid {
-        @media screen and (min-width: $lg) {
-            width: 100%;
-        }
-    }
-
-    &__button {
-        font-size: 60px;
-        position: absolute;
-    top: 0;
-    left: 30px;
-    }
-}
-
