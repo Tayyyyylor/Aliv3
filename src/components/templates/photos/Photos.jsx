@@ -8,7 +8,6 @@ export default function PhotosTemplate() {
   const [showModal, setShowModal] = useState(false)
   const [selectedCardData, setSelectedCardData] = useState(null)
 
-  console.log('selectCardData', selectedCardData)
 
   const handleClick = cardIndex => {
     setShowModal(true)
@@ -20,8 +19,6 @@ export default function PhotosTemplate() {
     setSelectedCardData(null)
   }
 
-  console.log('showModal', showModal)
-  console.log('selectCardData', selectedCardData)
   return (
     <main className="photos">
       {showModal && <div className="overlay"></div>}
@@ -29,6 +26,7 @@ export default function PhotosTemplate() {
         {cardsData.map((card, index) => (
           <Cards
             key={index}
+            isHoverEnabled={false}
             src={card.src}
             alt={card.alt}
             label={card.label}

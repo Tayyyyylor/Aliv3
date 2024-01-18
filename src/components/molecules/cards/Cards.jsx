@@ -9,16 +9,16 @@ export default function Cards({
   onClick,
   className,
   sizeClassName,
-  gif
+  gif,
+  isHoverEnabled
 }) {
 
   const [isHover, setIsHover] = useState(false)
 
-
   return (
-    <section className={`cards ${sizeClassName}`} onClick={onClick} onMouseEnter={() => setIsHover(true)}
-    onMouseLeave={() => setIsHover(false)}>
-      {isHover ? (
+    <section className={`cards ${sizeClassName}`} onClick={onClick} onMouseEnter={() => isHoverEnabled && setIsHover(true)}
+    onMouseLeave={() => isHoverEnabled && setIsHover(false)}>
+      {isHoverEnabled && isHover ? (
         <div className='cards__video_container'>
           <video autoPlay muted loop className="cards__video">
           <source src={gif} type="video/webm" />
