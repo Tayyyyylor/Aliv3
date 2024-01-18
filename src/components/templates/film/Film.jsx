@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
 import Cards from '@/components/molecules/cards/Cards'
 import Modal from '@/components/molecules/modal/Modal'
@@ -8,11 +9,17 @@ export default function FilmTemplate() {
   const [showModal, setShowModal] = useState(false)
   const [selectedCardData, setSelectedCardData] = useState(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [loader, setLoader] = useState(true)
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 1024)
   }, [])
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+}, 3000);
+}, []);
 
 
   const cardsToDisplay = !isMobile ? cardsData.slice(1) : cardsData
@@ -28,9 +35,8 @@ export default function FilmTemplate() {
     setSelectedCardData(null)
   }
 
-  console.log('showModal', showModal)
-  console.log('selectCardData', selectedCardData)
   return (
+ 
     <main className="work">
       {showModal && <div className="overlay"></div>}
       <div className="work__card">
@@ -40,6 +46,7 @@ export default function FilmTemplate() {
             src={card.src}
             alt={card.alt}
             label={card.label}
+            isHoverEnabled={true}
             gif={card.gif}
             gifMp4={card.gifMp4}
             subtitle={card.subtitle}
@@ -64,6 +71,6 @@ export default function FilmTemplate() {
         )}
       </div>
       {showModal && <Backdrop onCancel={handleClose} />}
-    </main>
-  )
+    </main> 
+    )
 }
