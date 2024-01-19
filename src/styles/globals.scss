@@ -1,19 +1,18 @@
+@use '../components/layouts/header/Header.scss' as *;
 @use '../components/atoms/title/Title.scss' as *;
 @use '../components/atoms/loader/Loader.scss' as *;
 @use '../components/atoms/logo/Logo.scss' as *;
-@use '../components/layouts/header/Header.scss' as *;
+@use '../components/atoms/buttons/defaultButton/DefaultButton.scss' as *;
+@use '../components/atoms/buttons/closeButton/CloseButton.scss' as *;
+@use '../components/atoms/backdrop/Backdrop.scss' as *;
 @use '../components/molecules/navbar/Navbar.scss' as *;
-@use '../components/molecules/slider/Slider.scss' as *;
 @use '../components/molecules/cards/Cards.scss' as *;
+@use '../components/molecules/modal/Modal.scss' as *;
+@use '../components/molecules/imageModal/ImageModal.scss' as *;
 @use '../components/templates/Homepage/Homepage.scss' as *;
 @use '../components/templates/contact/ContactTemplate.scss' as *;
 @use '../components/templates/film/Film.scss' as *;
 @use '../components/templates/photos/Photos.scss' as *;
-@use '../components/molecules/modal/Modal.scss' as *;
-@use '../components/atoms/buttons/defaultButton/DefaultButton.scss' as *;
-@use '../components/atoms/buttons/closeButton/CloseButton.scss' as *;
-@use '../components/molecules/imageModal/ImageModal.scss' as *;
-@use '../components/atoms/backdrop/Backdrop.scss' as *;
 @use './variables' as *;
 
 @font-face {

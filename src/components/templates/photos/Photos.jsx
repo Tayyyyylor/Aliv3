@@ -8,7 +8,6 @@ export default function PhotosTemplate() {
   const [showModal, setShowModal] = useState(false)
   const [selectedCardData, setSelectedCardData] = useState(null)
 
-
   const handleClick = cardIndex => {
     setShowModal(true)
     setSelectedCardData(cardsData[cardIndex])

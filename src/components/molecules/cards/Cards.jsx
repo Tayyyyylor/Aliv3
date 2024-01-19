@@ -10,33 +10,36 @@ export default function Cards({
   className,
   sizeClassName,
   gif,
-  isHoverEnabled
+  isHoverEnabled,
 }) {
-
   const [isHover, setIsHover] = useState(false)
 
   return (
-    <section className={`cards ${sizeClassName}`} onClick={onClick} onMouseEnter={() => isHoverEnabled && setIsHover(true)}
-    onMouseLeave={() => isHoverEnabled && setIsHover(false)}>
+    <section
+      className={`cards ${sizeClassName}`}
+      onClick={onClick}
+      onMouseEnter={() => isHoverEnabled && setIsHover(true)}
+      onMouseLeave={() => isHoverEnabled && setIsHover(false)}
+    >
       {isHoverEnabled && isHover ? (
-        <div className='cards__video_container'>
+        <div className="cards__video_container">
           <video autoPlay muted loop className="cards__video">
-          <source src={gif} type="video/webm" />
-        </video>
-         <div>
-         <h3 className="cards__title">{label}</h3>
-         <p className="cards__subtitle">{subtitle}</p>
-       </div>
+            <source src={gif} type="video/webm" />
+          </video>
+          <div>
+            <h3 className="cards__title">{label}</h3>
+            <p className="cards__subtitle">{subtitle}</p>
+          </div>
         </div>
       ) : (
         <>
-        <img src={src} alt={alt} className={className} />
-      <div>
-        <h3 className="cards__title">{label}</h3>
-        <p className="cards__subtitle">{subtitle}</p>
-      </div>
+          <img src={src} alt={alt} className={className} />
+          <div>
+            <h3 className="cards__title">{label}</h3>
+            <p className="cards__subtitle">{subtitle}</p>
+          </div>
         </>
-        )}
+      )}
     </section>
   )
 }

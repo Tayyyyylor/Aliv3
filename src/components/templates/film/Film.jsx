@@ -17,10 +17,9 @@ export default function FilmTemplate() {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoader(false);
-}, 3000);
-}, []);
-
+      setLoader(false)
+    }, 3000)
+  }, [])
 
   const cardsToDisplay = !isMobile ? cardsData.slice(1) : cardsData
   const handleClick = cardIndex => {
@@ -34,9 +33,9 @@ export default function FilmTemplate() {
     setShowModal(false)
     setSelectedCardData(null)
   }
+  console.log('selectedCardData', selectedCardData)
 
   return (
- 
     <main className="work">
       {showModal && <div className="overlay"></div>}
       <div className="work__card">
@@ -62,8 +61,15 @@ export default function FilmTemplate() {
             <Modal
               onClick={handleClose}
               title={selectedCardData.label}
-              desc={<div dangerouslySetInnerHTML={{ __html: selectedCardData.desc.replace(/\n/g, '<br/>') }} />}
+              desc={
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: selectedCardData.desc.replace(/\n/g, '<br/>'),
+                  }}
+                />
+              }
               subtitle={selectedCardData.subtitle}
+              isSliderEnabled={selectedCardData.isSliderEnabled}
               src={selectedCardData.video}
               srcMp4={selectedCardData.srcMp4}
             />
@@ -71,6 +77,6 @@ export default function FilmTemplate() {
         )}
       </div>
       {showModal && <Backdrop onCancel={handleClose} />}
-    </main> 
-    )
+    </main>
+  )
 }

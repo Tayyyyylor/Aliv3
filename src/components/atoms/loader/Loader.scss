@@ -1,34 +1,29 @@
 .loader-container {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-loader {
+  width: 50px;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
-  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .img-loader {
-    width: 50px;
+    width: 100px;
     animation: rotation 2s linear infinite;
-  
   }
-  
-  
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @media screen and (min-width:1024px) {
-  
-    .img-loader {
-      width: 100px;
-      animation: rotation 2s linear infinite;
-    }
-  
-  }
+}
