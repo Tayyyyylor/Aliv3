@@ -46,14 +46,14 @@ export default function ContactTemplate() {
             />
             {alert && <p className="contact__alert">Email copied.</p>}
           </div>
-            <Image
-              src={behance}
-              alt=""
-              width={150}
-              height={150}
-              className="contact__img"
-              onClick={handleBehanceClick}
-            />
+          <Image
+            src={behance}
+            alt=""
+            width={150}
+            height={150}
+            className="contact__img"
+            onClick={handleBehanceClick}
+          />
         </div>
       </div>
     </main>
