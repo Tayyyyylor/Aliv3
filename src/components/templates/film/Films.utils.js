@@ -66,7 +66,7 @@ export const cardsData = [
       'https://res.cloudinary.com/dna8sibxu/video/upload/v1704497811/4%20UNDERGROUND%20EFFECT%20x%20FREESTYLE/EXTRAIT_UNDERGROUND_EFFECT_hbzk0y.mp4',
     alt: 'foule',
     isSliderEnabled: 'true',
-    label: 'UNDERGROUND EFFECT SERIE',
+    label: 'UNDERGROUND EFFECT',
     subtitle: 'Directing/Framing/Editing',
     desc: 'Notorious Brand associates with La Villette for the event FREESTYLE, which brings together various urban disciplines. A collaboration highlighting the creativity and energy of urban cultures.',
   },
