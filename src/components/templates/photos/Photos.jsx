@@ -18,6 +18,8 @@ export default function PhotosTemplate() {
     setSelectedCardData(null)
   }
 
+  console.log('selectedCardData.gallery', selectedCardData?.gallery[2])
+
   return (
     <main className="photos">
       {showModal && <div className="overlay"></div>}

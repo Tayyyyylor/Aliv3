@@ -6,11 +6,11 @@
   align-items: center;
   color: black;
   background-color: white;
-
   padding: 2rem;
   position: relative;
   height: 90vh; /* 90% de la hauteur de la vue */
   overflow-y: auto;
+
   &__title {
     margin-top: 23px;
   }
@@ -20,6 +20,7 @@
     flex-direction: column;
     gap: 10px; /* Espace entre les images */
     margin-top: 30px;
+    cursor: pointer;
     @media screen and (min-width: $lg) {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* Trois colonnes égales */
@@ -40,5 +41,20 @@
     position: absolute;
     top: 0;
     left: 30px;
+  }
+
+  &__zoom {
+    height: 90vh; 
+    overflow-y: hidden;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+
+    &_img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
   }
 }
