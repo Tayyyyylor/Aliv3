@@ -13,6 +13,10 @@ function Navbar() {
     setMenuIsOpen(!menuIsOpen)
   }
 
+  const handleClick = () => {
+    setMenuIsOpen(false)
+  }
+
   return (
     <>
       {isMobile ? (
@@ -20,13 +24,13 @@ function Navbar() {
           className={`nav-mobile ${menuIsOpen ? 'active' : ''}`}
           style={{ background: 'white', transition: 'all 0.5s ease-in-out' }}
         >
-          <Link href="/films" className="navbar-link margin-top">
+          <Link href="/films" className="navbar-link margin-top" onClick={handleClick}>
             film
           </Link>
-          <Link href="/photos" className="navbar-link">
+          <Link href="/photos" className="navbar-link" onClick={handleClick}>
             image
           </Link>
-          <Link href="/contact" className="navbar-link">
+          <Link href="/contact" className="navbar-link" onClick={handleClick}>
             contact
           </Link>
         </nav>
