@@ -1,9 +1,14 @@
 .header {
   display: flex;
-  background-color: transparent;
+  background-color: white;
   padding: 1rem;
-  z-index: 19;
+  z-index: 21;
+  width: 100%;
   gap: 5rem;
-  position: relative;
+  position: fixed;
   align-items: flex-end;
+
+  &__logo {
+    color: black;
+  }
 }
