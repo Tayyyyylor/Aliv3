@@ -2,7 +2,6 @@
 name: Environments
 
 on: 
-
 workflow_dispatch:
 
 jobs:
@@ -10,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: Develop
     steps:
-    uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - name: Run a script
       run: echo "I am running a job in Develop"
 
@@ -19,7 +18,7 @@ jobs:
     environment: Préproduction
     needs: Develop
     steps:
-    uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - name: Run a script
       run: echo "I am running a job in Préproduction"
 
@@ -28,7 +27,7 @@ jobs:
     environment: Production
     needs: Préproduction
     steps:
-    uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - name: Run a script
       run: echo "I am running a job in Production"
 
