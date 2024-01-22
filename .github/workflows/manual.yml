@@ -20,12 +20,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a script
-      run: echo "I am running a job in Préproduction"
+      run: echo "I am running a job in Preproduction"
 
   Production:
     runs-on: ubuntu-latest
     environment: Production
-    needs: Préproduction
+    needs: Preproduction
     steps:
     - uses: actions/checkout@v2
     - name: Run a script
