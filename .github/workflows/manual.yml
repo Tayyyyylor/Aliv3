@@ -13,7 +13,7 @@ jobs:
     - name: Run a script
       run: echo "I am running a job in Develop"
 
-  Préproduction:
+  Preprod:
     runs-on: ubuntu-latest
     environment: Préproduction
     needs: Develop
