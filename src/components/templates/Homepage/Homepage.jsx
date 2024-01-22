@@ -22,7 +22,6 @@ useLayoutEffect(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".intro",
-      markers: true,
       pin: true,
       scrub: true,
       start: "top top",
