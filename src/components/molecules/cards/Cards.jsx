@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react'
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import React, { useLayoutEffect, useState } from 'react'
 
 export default function Cards({
   src,
@@ -13,6 +15,27 @@ export default function Cards({
   isHoverEnabled,
 }) {
   const [isHover, setIsHover] = useState(false)
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useLayoutEffect(() => {
+
+    gsap.fromTo(".cards",{
+      opacity: 0,
+      scale: .3
+    }, {
+      scrollTrigger:{
+        trigger:  ".cards",
+        toggleActions: "restart none none none",
+        scrub: true
+      },
+      opacity: 1,
+      duration: 2,
+      scale: 1
+
+    })
+    
+  }, [])
 
   return (
     <section

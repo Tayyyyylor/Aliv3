@@ -1,29 +1,18 @@
 @use '../../../styles/variables' as *;
 
-.intro {
-  &__button {
-    color: black;
-  }
-}
+
 
 .intro {
   left: 0;
   width: 100%;
   z-index: 20;
   height: 100%;
+  position: sticky;
   color: white; /* Couleur du texte, ajustez selon votre design */
 
   &__video {
     width: 100%;
     position: relative;
-  }
-
-  &__video__entire {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    z-index: 200;
   }
 
   &__button {
