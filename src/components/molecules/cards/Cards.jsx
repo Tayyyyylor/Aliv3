@@ -27,7 +27,6 @@ export default function Cards({
       scrollTrigger:{
         trigger:  ".cards",
         toggleActions: "restart none none none",
-        scrub: true
       },
       opacity: 1,
       duration: 2,
