@@ -2,7 +2,10 @@
 name: Environments
 
 on: 
-workflow_dispatch:
+push:
+branches: 
+ - develop
+ - master
 
 jobs:
   Develop:
