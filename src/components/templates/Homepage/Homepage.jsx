@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import  ScrollTrigger  from 'gsap/dist/ScrollTrigger'
 import DefaultButton from '@/components/atoms/buttons/defaultButton/DefaultButton'
 import { useRouter } from 'next/router'
 import { cardsData } from './Films.utils'
@@ -13,6 +15,28 @@ export default function HomepageTemplate() {
   const videoRef = useRef(null);
 
   // const isMobile = window.innerWidth < 1024
+
+    gsap.registerPlugin(ScrollTrigger);
+
+useLayoutEffect(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".intro",
+      markers: true,
+      pin: true,
+      scrub: true,
+      start: "top top",
+      end: "10%",
+      toggleActions: "play pause reverse pause"
+    },
+  })
+
+  tl.to(".intro__button", {
+    y: -500,
+    duration: 3
+  })
+  
+}, [])
 
   const handleWatch = () => {
     setShowVideo(true)
