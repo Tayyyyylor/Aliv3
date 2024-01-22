@@ -1,11 +1,8 @@
 
 name: Environments
 
-on: 
-push:
-branches: 
- - develop
- - master
+on: push
+
 
 jobs:
   Develop:
