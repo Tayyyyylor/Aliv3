@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import React, { useEffect, useState } from 'react'
 
 export default function Cards({
@@ -19,21 +19,22 @@ export default function Cards({
   gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
-
-    gsap.fromTo(".cards",{
-      opacity: 0,
-      scale: .3
-    }, {
-      scrollTrigger:{
-        trigger:  ".cards",
-        toggleActions: "restart none none none",
+    gsap.fromTo(
+      '.cards',
+      {
+        opacity: 0,
+        scale: 0.3,
       },
-      opacity: 1,
-      duration: 2,
-      scale: 1
-
-    })
-    
+      {
+        scrollTrigger: {
+          trigger: '.cards',
+          toggleActions: 'restart none none none',
+        },
+        opacity: 1,
+        duration: 2,
+        scale: 1,
+      }
+    )
   }, [])
 
   return (
