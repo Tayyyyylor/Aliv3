@@ -5,7 +5,7 @@ export default function Logo({ className }) {
 
   return (
     <Link href="/">
-      <h1 className={`logo ${className}`}> ali bensaali</h1>
+      <h1 className={`logo ${className}`}> OUIOUIOUIOUIO</h1>
     </Link>
   )
 }
