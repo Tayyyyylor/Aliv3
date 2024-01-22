@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import  ScrollTrigger  from 'gsap/dist/ScrollTrigger'
 import DefaultButton from '@/components/atoms/buttons/defaultButton/DefaultButton'
@@ -20,7 +20,7 @@ export default function HomepageTemplate() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-useLayoutEffect(() => {
+useEffect(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".intro",

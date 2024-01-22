@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Cards({
   src,
@@ -18,7 +18,7 @@ export default function Cards({
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
 
     gsap.fromTo(".cards",{
       opacity: 0,

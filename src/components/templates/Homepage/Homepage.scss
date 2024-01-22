@@ -13,6 +13,11 @@
   &__video {
     width: 100%;
     position: relative;
+    height: 100vh;
+    object-fit: contain;
+    @media screen and (min-width: $lg) {
+      height: 100%;
+    }
   }
 
   &__button {
@@ -46,6 +51,12 @@
 .video {
   width: 100%;
   background-color: black;
+  margin-top: 56.5px;
+  height: 100%;
+
+    @media screen and (min-width: $lg) {
+      margin-top: 71px;
+    }
 
   @media screen and (min-width: $xlg) {
     height: 100vh;
