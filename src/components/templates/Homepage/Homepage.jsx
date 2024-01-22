@@ -26,7 +26,7 @@ useLayoutEffect(() => {
       pin: true,
       scrub: true,
       start: "top top",
-      end: "10%",
+      end: "50%",
       toggleActions: "play pause reverse pause"
     },
   })
