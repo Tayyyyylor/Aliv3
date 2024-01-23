@@ -17,7 +17,6 @@ export default function ImageModal({ label, onClick, gallery }) {
     setZoom(false)
     setZoomIndex(null)
   }
-  console.log('zoomIndex', zoomIndex)
 
   return (
     <section className="imageModal">
