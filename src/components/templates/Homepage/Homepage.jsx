@@ -18,9 +18,7 @@ export default function HomepageTemplate() {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-    // const mm = gsap.matchMedia();
 
-    // mm.add("(min-width: 1024px)", () => {
     gsap.to('.intro__cta_container', {
       scrollTrigger: {
         trigger: '.intro',
@@ -49,8 +47,6 @@ export default function HomepageTemplate() {
           scale: 1,
         }
       )
-    // })
-    // return () => mm.revert();
   })
 
   const handleWatch = () => {
