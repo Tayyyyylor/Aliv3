@@ -48,11 +48,9 @@
 .video {
   width: 100%;
   background-color: black;
-  margin-top: 56.5px;
   height: 90%;
 
   @media screen and (min-width: $lg) {
-    margin-top: 71px;
     height: 100%;
   }
 
