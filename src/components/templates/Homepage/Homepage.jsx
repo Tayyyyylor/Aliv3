@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import DefaultButton from '@/components/atoms/buttons/defaultButton/DefaultButton'
 import { cardsData } from './Films.utils'
 import Cards from '@/components/molecules/cards/Cards'
@@ -12,16 +12,16 @@ export default function HomepageTemplate() {
   const [showVideo, setShowVideo] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [selectedCardData, setSelectedCardData] = useState(null)
-  // const [isMobile, setIsMobile] = useState(false)
-  const [loader, setLoader] = useState(true)
-  const videoRef = useRef(null)
 
-  // const isMobile = window.innerWidth < 1024
+  const videoRef = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
-    const tl = gsap.timeline({
+  useGSAP(() => {
+    // const mm = gsap.matchMedia();
+
+    // mm.add("(min-width: 1024px)", () => {
+    gsap.to('.intro__cta_container', {
       scrollTrigger: {
         trigger: '.intro',
         pin: true,
@@ -30,13 +30,28 @@ export default function HomepageTemplate() {
         end: '30%',
         toggleActions: 'play pause reverse pause',
       },
-    })
-
-    tl.to('.intro__button', {
       y: -500,
       duration: 3,
-    })
-  }, [])
+    }),
+      gsap.fromTo(
+        '.work__card',
+        {
+          opacity: 0,
+          scale: 0.3,
+        },
+        {
+          scrollTrigger: {
+            trigger: '.work__card',
+            toggleActions: 'restart none none none',
+          },
+          opacity: 1,
+          duration: 2,
+          scale: 1,
+        }
+      )
+    // })
+    // return () => mm.revert();
+  })
 
   const handleWatch = () => {
     setShowVideo(true)
@@ -54,38 +69,8 @@ export default function HomepageTemplate() {
     }
   }
 
-  // useEffect(() => {
-  //   const checkMobile = () => {
-  //     if (window.innerWidth < 1024) {
-  //       router.push('/#films')
-  //     }
-  //   }
-
-  //   checkMobile()
-
-  //   window.addEventListener('resize', checkMobile)
-
-  //   return () => {
-  //     window.removeEventListener('resize', checkMobile)
-  //   }
-  // }, [router])
-
-  // useEffect(() => {
-  //   setIsMobile(window.innerWidth < 1024)
-  // }, [])
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false)
-    }, 3000)
-  }, [])
-
-  // const cardsToDisplay = !isMobile ? cardsData.slice(1) : cardsData
   const handleClick = () => {
     setShowModal(true)
-    // isMobile
-    //   ? setSelectedCardData(cardsData[cardIndex])
-    //   : setSelectedCardData(cardsData[cardIndex + 1])
   }
 
   const handleClose = () => {
