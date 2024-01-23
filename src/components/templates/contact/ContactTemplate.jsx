@@ -36,6 +36,7 @@ export default function ContactTemplate() {
         rotation: 360,
         x: 0,
         duration: 1,
+        ease: "power2.inOut",
       }
     ),
       gsap.fromTo(
@@ -47,6 +48,7 @@ export default function ContactTemplate() {
           rotation: 360,
           x: 0,
           duration: 1.5,
+          ease: "power2.inOut",
         }
       ),
       gsap.fromTo(
@@ -58,6 +60,7 @@ export default function ContactTemplate() {
           rotation: 360,
           x: 0,
           duration: 2,
+          ease: "power2.inOut",
         }
       )
   })

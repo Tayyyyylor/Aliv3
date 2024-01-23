@@ -8,6 +8,7 @@ import Cards from '@/components/molecules/cards/Cards'
 import Modal from '@/components/molecules/modal/Modal'
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
 
+
 export default function HomepageTemplate() {
   const [showVideo, setShowVideo] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -27,6 +28,7 @@ export default function HomepageTemplate() {
         toggleActions: 'play pause reverse pause',
       },
       y: -500,
+      ease: "power2.inOut",
       duration: 3,
     })
   })
