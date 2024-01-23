@@ -32,7 +32,7 @@ export default function Cards({
       {
         scrollTrigger: {
           trigger: '.cards',
-          markers: true,
+          toggleActions: "restart none none none"
         },
         xPercent: 100,
         duration: 0.5,

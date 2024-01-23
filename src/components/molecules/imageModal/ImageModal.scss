@@ -23,7 +23,7 @@
     cursor: pointer;
     @media screen and (min-width: $lg) {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Trois colonnes égales */
+      grid-template-columns: repeat(7, 1fr); /* Trois colonnes égales */
       grid-auto-rows: minmax(100px, auto);
     }
   }
