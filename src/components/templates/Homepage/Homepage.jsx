@@ -18,9 +18,7 @@ export default function HomepageTemplate() {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-    // const mm = gsap.matchMedia();
 
-    // mm.add("(min-width: 1024px)", () => {
     gsap.to('.intro__cta_container', {
       scrollTrigger: {
         trigger: '.intro',
@@ -45,12 +43,10 @@ export default function HomepageTemplate() {
             toggleActions: 'restart none none none',
           },
           opacity: 1,
-          duration: 2,
+          duration: 1,
           scale: 1,
         }
       )
-    // })
-    // return () => mm.revert();
   })
 
   const handleWatch = () => {

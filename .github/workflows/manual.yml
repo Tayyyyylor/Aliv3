@@ -13,16 +13,10 @@ jobs:
     - name: Run a script
       run: echo "I am running a job in Develop"
 
-  Preprod:
-    runs-on: ubuntu-latest
-    environment: Préproduction
-    needs: Develop
-    steps:
-
   Production:
     runs-on: ubuntu-latest
     environment: Production
-    needs: Preprod
+    needs: Develop
     steps:
     - uses: actions/checkout@v2
     - name: Run a script
