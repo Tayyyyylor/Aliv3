@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import instagram from '../../../../public/instagram.png'
 import mail from '../../../../public/Mail.png'
 import behance from '../../../../public/BEHANCE.png'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 export default function ContactTemplate() {
   const [alert, setAlert] = useState(false)
@@ -23,6 +25,43 @@ export default function ContactTemplate() {
   const handleBehanceClick = () => {
     window.location.href = 'https://www.behance.net/alisays1/'
   }
+
+  useGSAP(() => {
+    gsap.fromTo(
+      '.behance',
+      {
+        x: -1000,
+      },
+      {
+        rotation: 360,
+        x: 0,
+        duration: 1,
+      }
+    ),
+    gsap.fromTo(
+      '.mail',
+      {
+        x: -1000,
+      },
+      {
+        rotation: 360,
+        x: 0,
+        duration: 1.5,
+      }
+    ),
+    gsap.fromTo(
+      '.insta',
+      {
+        x: -1000,
+      },
+      {
+        rotation: 360,
+        x: 0,
+        duration: 2,
+      }
+    )
+    })
+
   return (
     <main className="contact">
       <div className="contact__container">
@@ -32,7 +71,7 @@ export default function ContactTemplate() {
             alt=""
             width={150}
             height={150}
-            className="contact__img"
+            className="contact__img insta"
             onClick={handleInstaClick}
           />
           <div className="contact__mail">
@@ -41,7 +80,7 @@ export default function ContactTemplate() {
               alt=""
               width={150}
               height={150}
-              className="contact__img"
+              className="contact__img mail"
               onClick={handleEmailClick}
             />
             {alert && <p className="contact__alert">Email copied.</p>}
@@ -51,7 +90,7 @@ export default function ContactTemplate() {
             alt=""
             width={150}
             height={150}
-            className="contact__img"
+            className="contact__img behance"
             onClick={handleBehanceClick}
           />
         </div>

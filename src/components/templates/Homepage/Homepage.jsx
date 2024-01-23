@@ -18,7 +18,6 @@ export default function HomepageTemplate() {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-
     gsap.to('.intro__cta_container', {
       scrollTrigger: {
         trigger: '.intro',
@@ -46,6 +45,16 @@ export default function HomepageTemplate() {
           duration: 1,
           scale: 1,
         }
+      ),
+      gsap.fromTo(
+        '.work__modal',
+        {
+          scale: 0.3,
+        },
+        {
+          scale: 1,
+          duration: 3,
+        }
       )
   })
 
@@ -65,8 +74,9 @@ export default function HomepageTemplate() {
     }
   }
 
-  const handleClick = () => {
+  const handleClick = cardIndex => {
     setShowModal(true)
+    setSelectedCardData(cardsData[cardIndex])
   }
 
   const handleClose = () => {

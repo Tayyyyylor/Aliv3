@@ -5,6 +5,7 @@
   color: black;
   overflow-y: auto;
   position: relative;
+  z-index: 900;
   flex-direction: row-reverse;
 
   @media screen and (max-width: $md) {
