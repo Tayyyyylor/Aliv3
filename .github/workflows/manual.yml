@@ -1,24 +1,21 @@
-
 name: Environments
 
 on: push
-
 
 jobs:
   Develop:
     runs-on: ubuntu-latest
     environment: Develop
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a script
-      run: echo "I am running a job in Develop"
+      - uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "I am running a job in Develop"
 
   Production:
     runs-on: ubuntu-latest
     environment: Production
     needs: Develop
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a script
-      run: echo "I am running a job in Production"
-
+      - uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "I am running a job in Production"
