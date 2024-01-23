@@ -51,3 +51,8 @@
     display: none;
   }
 }
+
+.cards:hover {
+  scale: 1.05;
+  transition: .5s;
+}

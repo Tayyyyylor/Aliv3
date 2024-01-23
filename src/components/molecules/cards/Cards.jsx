@@ -35,8 +35,8 @@ export default function Cards({
           toggleActions: "restart none none none"
         },
         xPercent: 100,
-        duration: 0.5,
-        ease: 'power1.out',
+        duration: 1,
+        ease: "power2.inOut",
         onComplete: () => {
           setBlank(false)
         },
