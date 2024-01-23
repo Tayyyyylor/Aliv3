@@ -4,18 +4,17 @@ import gsap from 'gsap'
 import React from 'react'
 
 export default function Modal({ title, desc, onClick, subtitle, src, srcMp4 }) {
-
   useGSAP(() => {
-  gsap.fromTo(
-    '.modal',
-    {
-      scale: 0,
-    },
-    {
-      scale: 1,
-      duration: 1,
-    }
-  )
+    gsap.fromTo(
+      '.modal',
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        duration: 1,
+      }
+    )
   })
   return (
     <>

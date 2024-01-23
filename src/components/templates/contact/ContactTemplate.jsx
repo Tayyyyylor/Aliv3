@@ -38,29 +38,29 @@ export default function ContactTemplate() {
         duration: 1,
       }
     ),
-    gsap.fromTo(
-      '.mail',
-      {
-        x: -1000,
-      },
-      {
-        rotation: 360,
-        x: 0,
-        duration: 1.5,
-      }
-    ),
-    gsap.fromTo(
-      '.insta',
-      {
-        x: -1000,
-      },
-      {
-        rotation: 360,
-        x: 0,
-        duration: 2,
-      }
-    )
-    })
+      gsap.fromTo(
+        '.mail',
+        {
+          x: -1000,
+        },
+        {
+          rotation: 360,
+          x: 0,
+          duration: 1.5,
+        }
+      ),
+      gsap.fromTo(
+        '.insta',
+        {
+          x: -1000,
+        },
+        {
+          rotation: 360,
+          x: 0,
+          duration: 2,
+        }
+      )
+  })
 
   return (
     <main className="contact">

@@ -21,7 +21,6 @@ export default function HomepageTemplate() {
     gsap.to('.intro__cta_container', {
       scrollTrigger: {
         trigger: '.intro',
-        pin: true,
         scrub: true,
         start: 'top top',
         end: '30%',
@@ -29,33 +28,7 @@ export default function HomepageTemplate() {
       },
       y: -500,
       duration: 3,
-    }),
-      gsap.fromTo(
-        '.work__card',
-        {
-          opacity: 0,
-          scale: 0.3,
-        },
-        {
-          scrollTrigger: {
-            trigger: '.work__card',
-            toggleActions: 'restart none none none',
-          },
-          opacity: 1,
-          duration: 1,
-          scale: 1,
-        }
-      ),
-      gsap.fromTo(
-        '.work__modal',
-        {
-          scale: 0.3,
-        },
-        {
-          scale: 1,
-          duration: 3,
-        }
-      )
+    })
   })
 
   const handleWatch = () => {
