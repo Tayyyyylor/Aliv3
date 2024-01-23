@@ -15,11 +15,13 @@
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
+    margin-top: 56.5px;
     @media screen and (min-width: $lg) {
       padding: 4rem;
       gap: 2rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      margin-top: 71px;
     }
 
     &_content {

@@ -49,9 +49,13 @@
   width: 100%;
   background-color: black;
   height: 90%;
+  margin-top: 56.5px;
+
 
   @media screen and (min-width: $lg) {
     height: 100%;
+    margin-top: 71px;
+
   }
 
   @media screen and (min-width: $xlg) {
