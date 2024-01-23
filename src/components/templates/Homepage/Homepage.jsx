@@ -45,7 +45,7 @@ export default function HomepageTemplate() {
             toggleActions: 'restart none none none',
           },
           opacity: 1,
-          duration: 2,
+          duration: 1,
           scale: 1,
         }
       )
