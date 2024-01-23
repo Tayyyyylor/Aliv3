@@ -18,9 +18,6 @@ jobs:
     environment: Préproduction
     needs: Develop
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a script
-      run: echo "I am running a job in Preprod"
 
   Production:
     runs-on: ubuntu-latest

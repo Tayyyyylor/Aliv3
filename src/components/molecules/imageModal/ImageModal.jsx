@@ -5,13 +5,12 @@ import Title from '@/components/atoms/title/Title'
 import React, { useState } from 'react'
 
 export default function ImageModal({ label, onClick, gallery }) {
-
   const [zoom, setZoom] = useState(false)
-  const [zoomIndex, setZoomIndex] = useState(null);
+  const [zoomIndex, setZoomIndex] = useState(null)
 
-  const handleClick = (index) => {
+  const handleClick = index => {
     setZoom(true)
-    setZoomIndex(index);
+    setZoomIndex(index)
   }
 
   const handleClose = () => {
@@ -34,19 +33,19 @@ export default function ImageModal({ label, onClick, gallery }) {
             alt={`Photo ${index}`}
             className="imageModal__img"
           />
-          ))}
+        ))}
       </div>
       {zoom && (
         <>
-        <section className='imageModal__zoom'>
-      <img
-        src={gallery[zoomIndex]}
-        sizes="100vw"
-        alt={`Zoomed photo ${zoomIndex}`}
-        className="imageModal__zoom_img"
-        />
-        </section>
-      <Backdrop onCancel={handleClose} />
+          <section className="imageModal__zoom">
+            <img
+              src={gallery[zoomIndex]}
+              sizes="100vw"
+              alt={`Zoomed photo ${zoomIndex}`}
+              className="imageModal__zoom_img"
+            />
+          </section>
+          <Backdrop onCancel={handleClose} />
         </>
       )}
     </section>

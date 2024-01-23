@@ -1,34 +1,26 @@
 @use '../../../styles/variables' as *;
 
 .intro {
-  &__button {
-    color: black;
-  }
-}
-
-.intro {
   left: 0;
   width: 100%;
   z-index: 20;
   height: 100%;
+  position: sticky;
   color: white; /* Couleur du texte, ajustez selon votre design */
 
   &__video {
     width: 100%;
     position: relative;
-  }
-
-  &__video__entire {
-    width: 100%;
-    position: absolute;
-    top: 0;
     height: 100vh;
-    z-index: 200;
+    object-fit: contain;
+    @media screen and (min-width: $lg) {
+      height: 100%;
+    }
   }
 
   &__button {
     color: white;
-    border: 3px solid white ;
+    border: 3px solid white;
     padding: 1rem;
   }
 
@@ -53,10 +45,14 @@
   }
 }
 
-
 .video {
   width: 100%;
   background-color: black;
+  height: 90%;
+
+  @media screen and (min-width: $lg) {
+    height: 100%;
+  }
 
   @media screen and (min-width: $xlg) {
     height: 100vh;

@@ -24,7 +24,11 @@ function Navbar() {
           className={`nav-mobile ${menuIsOpen ? 'active' : ''}`}
           style={{ background: 'white', transition: 'all 0.5s ease-in-out' }}
         >
-          <Link href="/#films" className="navbar-link margin-top" onClick={handleClick}>
+          <Link
+            href="/#films"
+            className="navbar-link margin-top"
+            onClick={handleClick}
+          >
             film
           </Link>
           <Link href="/photos" className="navbar-link" onClick={handleClick}>

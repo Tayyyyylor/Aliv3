@@ -1,19 +1,5 @@
 export const cardsData = [
   {
-    src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1703963148/Intro/Capture_d_e%CC%81cran_2023-12-30_a%CC%80_20.04.54_uhg36a.png',
-    srcMp4:
-      'https://res.cloudinary.com/dna8sibxu/video/upload/v1704487120/Intro/REEL_2023_y7xncr.mp4',
-    video:
-      'https://res.cloudinary.com/dna8sibxu/video/upload/v1703956903/Intro/reeelWebm_amf758.webm',
-    gif: 'https://res.cloudinary.com/dna8sibxu/video/upload/v1704492004/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_GIF_fxmclh.webm',
-    gifMp4:
-      'https://res.cloudinary.com/dna8sibxu/video/upload/v1704492006/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_GIF_ogsi5f.mp4',
-    alt: '',
-    label: 'Intro',
-    subtitle: 'Compilation 2023',
-    desc: 'Full compilation of the Year.',
-  },
-  {
     src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1703960750/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_VIGNETTE_porvex_16-9_ybr4x1.jpg',
     srcMp4:
       'https://res.cloudinary.com/dna8sibxu/video/upload/v1704484585/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_-_SOYYMIMY_w25zpq.mp4',
