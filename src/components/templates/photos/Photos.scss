@@ -15,9 +15,13 @@
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
+    margin-top: 56.5px;
     @media screen and (min-width: $lg) {
       padding: 4rem;
-      gap: 5rem;
+      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 71px;
     }
 
     &_content {
@@ -32,7 +36,7 @@
 
     &_size {
       @media screen and (min-width: $lg) {
-        width: 24%;
+        width: 100%;
       }
     }
   }
@@ -41,7 +45,7 @@
     display: block;
     width: 90%;
     position: absolute;
-    z-index: 20;
+    z-index: 22;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

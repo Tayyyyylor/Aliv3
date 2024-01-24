@@ -6,6 +6,7 @@ export default function Loader() {
     <div className="loader-container">
       <Image
         width={200}
+        priority={false}
         height={200}
         src="./logoOngletBlanc.png"
         alt=""

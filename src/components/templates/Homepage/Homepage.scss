@@ -49,9 +49,13 @@
   width: 100%;
   background-color: black;
   height: 90%;
+  margin-top: 56.5px;
+
 
   @media screen and (min-width: $lg) {
     height: 100%;
+    margin-top: 71px;
+
   }
 
   @media screen and (min-width: $xlg) {
@@ -113,7 +117,7 @@
     display: block;
     width: 100%;
     position: fixed;
-    z-index: 20;
+    z-index: 22;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

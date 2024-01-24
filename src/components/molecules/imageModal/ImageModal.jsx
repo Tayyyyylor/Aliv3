@@ -17,7 +17,16 @@ export default function ImageModal({ label, onClick, gallery }) {
     setZoom(false)
     setZoomIndex(null)
   }
-  console.log('zoomIndex', zoomIndex)
+
+  const handleSwitchLeft = index => {
+    const newIndex = index - 1;
+  setZoomIndex(newIndex < 0 ? gallery.length - 1 : newIndex);
+  }
+
+  const handleSwitchRight = index => {
+    const newIndex = index + 1;
+    setZoomIndex(newIndex >= gallery.length ? 0 : newIndex);
+  }
 
   return (
     <section className="imageModal">
@@ -32,21 +41,27 @@ export default function ImageModal({ label, onClick, gallery }) {
             sizes="100vw"
             alt={`Photo ${index}`}
             className="imageModal__img"
+            loading='lazy'
           />
         ))}
       </div>
       {zoom && (
-        <>
+        <div className='zoom'>
+        <div className='imageModal__zoom_container'>
           <section className="imageModal__zoom">
+        <span className='imageModal__zoom_left' onClick={() => handleSwitchLeft(zoomIndex)}> &lt; </span>
             <img
               src={gallery[zoomIndex]}
               sizes="100vw"
               alt={`Zoomed photo ${zoomIndex}`}
               className="imageModal__zoom_img"
+              loading='lazy'
             />
+        <span className='imageModal__zoom_right' onClick={() => handleSwitchRight(zoomIndex)}> &gt; </span>
           </section>
           <Backdrop onCancel={handleClose} />
-        </>
+        </div>
+              </div>
       )}
     </section>
   )

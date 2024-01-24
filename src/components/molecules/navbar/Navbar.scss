@@ -64,13 +64,14 @@ nav.active {
 
 .navbar-link {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
 }
 .navbar-link:hover {
-  animation: 3s ease-in 1s infinite reverse both running scale;
+  scale: 1.1;
+  transition: .5s;
 }
 
 .nav-desktop {
@@ -99,15 +100,5 @@ nav.active {
 
   .navbar-link {
     color: black;
-  }
-
-  @keyframes scale {
-    from {
-      transform: scale(1);
-    }
-
-    to {
-      transform: scale(1.15);
-    }
   }
 }

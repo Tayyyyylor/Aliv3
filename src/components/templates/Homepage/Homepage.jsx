@@ -8,6 +8,7 @@ import Cards from '@/components/molecules/cards/Cards'
 import Modal from '@/components/molecules/modal/Modal'
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
 
+
 export default function HomepageTemplate() {
   const [showVideo, setShowVideo] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -18,35 +19,18 @@ export default function HomepageTemplate() {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-
     gsap.to('.intro__cta_container', {
       scrollTrigger: {
         trigger: '.intro',
-        pin: true,
         scrub: true,
         start: 'top top',
         end: '30%',
         toggleActions: 'play pause reverse pause',
       },
       y: -500,
+      ease: "power2.inOut",
       duration: 3,
-    }),
-      gsap.fromTo(
-        '.work__card',
-        {
-          opacity: 0,
-          scale: 0.3,
-        },
-        {
-          scrollTrigger: {
-            trigger: '.work__card',
-            toggleActions: 'restart none none none',
-          },
-          opacity: 1,
-          duration: 1,
-          scale: 1,
-        }
-      )
+    })
   })
 
   const handleWatch = () => {
@@ -65,8 +49,9 @@ export default function HomepageTemplate() {
     }
   }
 
-  const handleClick = () => {
+  const handleClick = cardIndex => {
     setShowModal(true)
+    setSelectedCardData(cardsData[cardIndex])
   }
 
   const handleClose = () => {
@@ -78,6 +63,7 @@ export default function HomepageTemplate() {
       <div className="intro">
         <div className="intro__video">
           <video
+            loading="lazy"
             className="video"
             ref={videoRef}
             preload="auto"
