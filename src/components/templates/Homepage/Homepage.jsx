@@ -63,6 +63,7 @@ export default function HomepageTemplate() {
       <div className="intro">
         <div className="intro__video">
           <video
+            loading="lazy"
             className="video"
             ref={videoRef}
             preload="auto"

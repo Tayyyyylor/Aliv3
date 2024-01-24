@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import instagram from '../../../../public/instagram.png'
 import mail from '../../../../public/Mail.png'
 import behance from '../../../../public/BEHANCE.png'
@@ -8,6 +8,11 @@ import gsap from 'gsap'
 
 export default function ContactTemplate() {
   const [alert, setAlert] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1024)
+  }, [])
   const myEmail = 'alibensays@gmail.com'
 
   const handleEmailClick = () => {
@@ -71,18 +76,20 @@ export default function ContactTemplate() {
         <div className="contact__img_container">
           <Image
             src={instagram}
+            priority={false}
             alt=""
-            width={150}
-            height={150}
+            width={isMobile ? 70 : 150}
+            height={isMobile ? 70 : 150}
             className="contact__img insta"
             onClick={handleInstaClick}
           />
           <div className="contact__mail">
             <Image
               src={mail}
+              priority={false}
               alt=""
-              width={150}
-              height={150}
+              width={isMobile ? 70 : 150}
+              height={isMobile ? 70 : 150}
               className="contact__img mail"
               onClick={handleEmailClick}
             />
@@ -90,9 +97,10 @@ export default function ContactTemplate() {
           </div>
           <Image
             src={behance}
+            priority={false}
             alt=""
-            width={150}
-            height={150}
+            width={isMobile ? 70 : 150}
+            height={isMobile ? 70 : 150}
             className="contact__img behance"
             onClick={handleBehanceClick}
           />
