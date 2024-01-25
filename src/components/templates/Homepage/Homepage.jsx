@@ -1,7 +1,4 @@
-import React, { useRef, useState } from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import React, { useEffect, useRef, useState } from 'react'
 import DefaultButton from '@/components/atoms/buttons/defaultButton/DefaultButton'
 import { cardsData } from './Films.utils'
 import Cards from '@/components/molecules/cards/Cards'
@@ -16,22 +13,13 @@ export default function HomepageTemplate() {
 
   const videoRef = useRef(null)
 
-  gsap.registerPlugin(ScrollTrigger)
+  const filmRef = useRef(null);
 
-  useGSAP(() => {
-    gsap.to('.intro__cta_container', {
-      scrollTrigger: {
-        trigger: '.intro',
-        scrub: true,
-        start: 'top top',
-        end: '30%',
-        toggleActions: 'play pause reverse pause',
-      },
-      y: -500,
-      ease: "power2.inOut",
-      duration: 3,
-    })
-  })
+  useEffect(() => {
+    // Faire défiler vers l'élément au montage du composant
+    filmRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
 
   const handleWatch = () => {
     setShowVideo(true)
@@ -81,15 +69,16 @@ export default function HomepageTemplate() {
             />
           </video>
           <div className="intro__cta_container">
+            <h2 className='intro__button_title'>introduction</h2>
             <DefaultButton
-              label="Watch Trailer ▶"
+              label="▶"
               onClick={handleWatch}
               className={showVideo ? 'intro__none' : 'intro__button'}
             />
           </div>
         </div>
       </div>
-      <main className="work" id="films">
+      <main className="work" id="films" ref={filmRef}>
         {showModal && <div className="overlay"></div>}
         <div className="work__card">
           {cardsData.map((card, index) => (

@@ -2,6 +2,7 @@
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import Title from '@/components/atoms/title/Title'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 export default function ImageModal({ label, onClick, gallery }) {
@@ -49,7 +50,7 @@ export default function ImageModal({ label, onClick, gallery }) {
         <div className='zoom'>
         <div className='imageModal__zoom_container'>
           <section className="imageModal__zoom">
-        <span className='imageModal__zoom_left' onClick={() => handleSwitchLeft(zoomIndex)}> &lt; </span>
+        <span className='imageModal__zoom_left' onClick={() => handleSwitchLeft(zoomIndex)}> <Image src="/arrowleft.png" width={30} height={30} alt=''/> </span>
             <img
               src={gallery[zoomIndex]}
               sizes="100vw"
@@ -57,7 +58,7 @@ export default function ImageModal({ label, onClick, gallery }) {
               className="imageModal__zoom_img"
               loading='lazy'
             />
-        <span className='imageModal__zoom_right' onClick={() => handleSwitchRight(zoomIndex)}> &gt; </span>
+        <span className='imageModal__zoom_right' onClick={() => handleSwitchRight(zoomIndex)}> <Image src="/arrowright.png" width={30} height={30} alt=''/> </span>
           </section>
           <Backdrop onCancel={handleClose} />
         </div>
