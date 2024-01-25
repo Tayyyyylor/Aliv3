@@ -8,6 +8,10 @@
   position: sticky;
   color: white; /* Couleur du texte, ajustez selon votre design */
 
+  @media screen and (min-width: $lg) {
+   
+  }
+
   &__video {
     width: 100%;
     position: relative;
@@ -20,8 +24,18 @@
 
   &__button {
     color: white;
-    border: 3px solid white;
-    padding: 1rem;
+    font-size: 20px;
+    width: 20%;
+
+    @media screen and (min-width: $lg) {
+    width: 4%;
+    }
+
+    &_title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: lightFont;
+    }
   }
 
   &__none {
@@ -31,13 +45,13 @@
   &__cta_container {
     position: absolute;
     z-index: 20;
-    top: 50%;
+    top: 80%;
     left: 50%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: center;
     transform: translate(-50%, -50%);
+    width: 100%;
   }
   &__logo {
     color: white;
@@ -48,7 +62,7 @@
 .video {
   width: 100%;
   background-color: black;
-  height: 90%;
+  height: 90vh;
   margin-top: 56.5px;
 
 
