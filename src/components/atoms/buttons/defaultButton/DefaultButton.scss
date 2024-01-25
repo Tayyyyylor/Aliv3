@@ -1,9 +1,12 @@
 @use '../../../../styles/_variables.scss' as *;
 .defaultbutton {
   color: white;
-  background-color: transparent;
+  background-color: rgb(147, 144, 144, .7);
   text-transform: uppercase;
+  border-radius: 100px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 12px;
+  width: 100%;
+  padding: 5px;
 }

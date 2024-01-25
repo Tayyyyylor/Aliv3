@@ -74,9 +74,8 @@
     &_left {
       position: absolute;
       top: 50%;
-      left: 50px;
+      left: 25%;
       transform: translate(-50%, -50%);
-    font-size: 60px;
     color: white;
     z-index: 200;
     cursor: pointer;
@@ -86,8 +85,8 @@
       position: absolute;
       top: 50%;
       cursor: pointer;
-      right: 50px;
-      font-size: 60px;
+      right: 25%;
+      transform: translate(-50%, -50%);
       color: white;
       z-index: 200;
     }
