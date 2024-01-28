@@ -117,9 +117,7 @@
     &_content {
       width: 100%;
     }
-    &_content:hover {
-      background-image: url('../../../../public/ulysseGif.webm');
-    }
+  
     &_size {
       @media screen and (min-width: $lg) {
         width: 100%;
