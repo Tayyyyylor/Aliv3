@@ -60,11 +60,11 @@ export default function HomepageTemplate() {
             controls={showVideo ? true : false}
           >
             <source
-              src="https://res.cloudinary.com/dna8sibxu/video/upload/v1703956903/Intro/reeelWebm_amf758.webm"
+              src="/reeelWebm.webm"
               type="video/webm"
             />
             <source
-              src="https://res.cloudinary.com/dna8sibxu/video/upload/v1704487120/Intro/REEL_2023_y7xncr.mp4"
+              src="/reelAccueil.mp4"
               type="video/mp4"
             />
           </video>
