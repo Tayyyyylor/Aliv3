@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, {  useRef, useState } from 'react'
 import DefaultButton from '@/components/atoms/buttons/defaultButton/DefaultButton'
 import { cardsData } from './Films.utils'
 import Cards from '@/components/molecules/cards/Cards'
@@ -14,10 +14,7 @@ export default function HomepageTemplate() {
 
   const filmRef = useRef(null)
 
-  useEffect(() => {
-    // Faire défiler vers l'élément au montage du composant
-    filmRef.current.scrollIntoView({ behavior: 'smooth' })
-  }, [])
+
 
   const handleWatch = () => {
     setShowVideo(true)
@@ -86,6 +83,7 @@ export default function HomepageTemplate() {
               sizeClassName="work__card_size"
               onClick={() => handleClick(index)}
               className="work__card_content"
+             
             />
           ))}
         </div>
