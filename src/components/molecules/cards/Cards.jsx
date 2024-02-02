@@ -32,11 +32,11 @@ export default function Cards({
       {
         scrollTrigger: {
           trigger: '.cards',
-          toggleActions: "restart none none none"
+          toggleActions: 'restart none none none',
         },
         xPercent: 100,
         duration: 1,
-        ease: "power2.inOut",
+        ease: 'power2.inOut',
         onComplete: () => {
           setBlank(false)
         },
@@ -53,7 +53,13 @@ export default function Cards({
       {isHoverEnabled && isHover ? (
         <div className="cards__video_container">
           <div className="cards__container_img">
-            <video autoPlay muted loading= "lazy" loop className="cards__video cards__img">
+            <video
+              autoPlay
+              muted
+              loading="lazy"
+              loop
+              className="cards__video cards__img"
+            >
               <source src={gif} type="video/webm" />
             </video>
           </div>
@@ -68,7 +74,12 @@ export default function Cards({
             <div
               className={blank ? 'cards__white_overlay' : 'cards__none'}
             ></div>
-            <img src={src} alt={alt} className={`cards__img ${className}`} loading='lazy'/>
+            <img
+              src={src}
+              alt={alt}
+              className={`cards__img ${className}`}
+              loading="lazy"
+            />
           </div>
           <div className="cards__text_container">
             <h3 className="cards__title">{label}</h3>

@@ -1,18 +1,14 @@
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import instagram from '../../../../public/instagram.png'
 import mail from '../../../../public/Mail.png'
 import behance from '../../../../public/BEHANCE.png'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import LogoRs from '@/components/atoms/logoRs/LogoRs'
 
 export default function ContactTemplate() {
   const [alert, setAlert] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 1024)
-  }, [])
   const myEmail = 'alibensays@gmail.com'
 
   const handleEmailClick = () => {
@@ -41,7 +37,7 @@ export default function ContactTemplate() {
         rotation: 360,
         x: 0,
         duration: 1,
-        ease: "power2.inOut",
+        ease: 'power2.inOut',
       }
     ),
       gsap.fromTo(
@@ -53,7 +49,7 @@ export default function ContactTemplate() {
           rotation: 360,
           x: 0,
           duration: 1.5,
-          ease: "power2.inOut",
+          ease: 'power2.inOut',
         }
       ),
       gsap.fromTo(
@@ -65,7 +61,7 @@ export default function ContactTemplate() {
           rotation: 360,
           x: 0,
           duration: 2,
-          ease: "power2.inOut",
+          ease: 'power2.inOut',
         }
       )
   })
@@ -74,33 +70,27 @@ export default function ContactTemplate() {
     <main className="contact">
       <div className="contact__container">
         <div className="contact__img_container">
-          <Image
+          <LogoRs
             src={instagram}
             priority={false}
             alt=""
-            width={isMobile ? 70 : 150}
-            height={isMobile ? 70 : 150}
             className="contact__img insta"
             onClick={handleInstaClick}
           />
           <div className="contact__mail">
-            <Image
+            <LogoRs
               src={mail}
               priority={false}
               alt=""
-              width={isMobile ? 70 : 150}
-              height={isMobile ? 70 : 150}
               className="contact__img mail"
               onClick={handleEmailClick}
             />
             {alert && <p className="contact__alert">Email copied.</p>}
           </div>
-          <Image
+          <LogoRs
             src={behance}
             priority={false}
             alt=""
-            width={isMobile ? 70 : 150}
-            height={isMobile ? 70 : 150}
             className="contact__img behance"
             onClick={handleBehanceClick}
           />

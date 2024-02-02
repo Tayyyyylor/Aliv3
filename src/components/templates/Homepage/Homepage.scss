@@ -9,7 +9,6 @@
   color: white; /* Couleur du texte, ajustez selon votre design */
 
   @media screen and (min-width: $lg) {
-   
   }
 
   &__video {
@@ -28,13 +27,13 @@
     width: 20%;
 
     @media screen and (min-width: $lg) {
-    width: 4%;
+      width: 4%;
     }
 
     &_title {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: lightFont;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: lightFont;
     }
   }
 
@@ -65,11 +64,9 @@
   height: 90vh;
   margin-top: 56.5px;
 
-
   @media screen and (min-width: $lg) {
     height: 100%;
     margin-top: 71px;
-
   }
 
   @media screen and (min-width: $xlg) {
@@ -97,6 +94,7 @@
 
   @media screen and (min-width: $lg) {
     margin: 0 auto;
+    margin-bottom: 200px;
     padding: 0 10rem;
   }
 
@@ -117,7 +115,7 @@
     &_content {
       width: 100%;
     }
-  
+
     &_size {
       @media screen and (min-width: $lg) {
         width: 100%;

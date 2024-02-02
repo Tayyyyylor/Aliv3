@@ -5,7 +5,6 @@ import Cards from '@/components/molecules/cards/Cards'
 import Modal from '@/components/molecules/modal/Modal'
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
 
-
 export default function HomepageTemplate() {
   const [showVideo, setShowVideo] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -13,13 +12,12 @@ export default function HomepageTemplate() {
 
   const videoRef = useRef(null)
 
-  const filmRef = useRef(null);
+  const filmRef = useRef(null)
 
   useEffect(() => {
     // Faire défiler vers l'élément au montage du composant
-    filmRef.current.scrollIntoView({ behavior: 'smooth' });
-  }, []);
-
+    filmRef.current.scrollIntoView({ behavior: 'smooth' })
+  }, [])
 
   const handleWatch = () => {
     setShowVideo(true)
@@ -59,17 +57,11 @@ export default function HomepageTemplate() {
             autoPlay
             controls={showVideo ? true : false}
           >
-            <source
-              src="/reeelWebm.webm"
-              type="video/webm"
-            />
-            <source
-              src="/reelAccueil.mp4"
-              type="video/mp4"
-            />
+            <source src="/reeelWebm.webm" type="video/webm" />
+            <source src="/reelAccueil.mp4" type="video/mp4" />
           </video>
           <div className="intro__cta_container">
-            <h2 className='intro__button_title'>introduction</h2>
+            <h2 className="intro__button_title">introduction</h2>
             <DefaultButton
               label="▶"
               onClick={handleWatch}
