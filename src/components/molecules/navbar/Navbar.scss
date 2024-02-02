@@ -68,10 +68,11 @@ nav.active {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: mediumFont;
 }
 .navbar-link:hover {
   scale: 1.1;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .nav-desktop {

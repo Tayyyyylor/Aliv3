@@ -20,13 +20,13 @@ export default function ImageModal({ label, onClick, gallery }) {
   }
 
   const handleSwitchLeft = index => {
-    const newIndex = index - 1;
-  setZoomIndex(newIndex < 0 ? gallery.length - 1 : newIndex);
+    const newIndex = index - 1
+    setZoomIndex(newIndex < 0 ? gallery.length - 1 : newIndex)
   }
 
   const handleSwitchRight = index => {
-    const newIndex = index + 1;
-    setZoomIndex(newIndex >= gallery.length ? 0 : newIndex);
+    const newIndex = index + 1
+    setZoomIndex(newIndex >= gallery.length ? 0 : newIndex)
   }
 
   return (
@@ -42,27 +42,53 @@ export default function ImageModal({ label, onClick, gallery }) {
             sizes="100vw"
             alt={`Photo ${index}`}
             className="imageModal__img"
-            loading='lazy'
+            loading="lazy"
           />
         ))}
       </div>
       {zoom && (
-        <div className='zoom'>
-        <div className='imageModal__zoom_container'>
-          <section className="imageModal__zoom">
-        <span className='imageModal__zoom_left' onClick={() => handleSwitchLeft(zoomIndex)}> <Image src="/arrowleft.png" width={30} height={30} alt=''/> </span>
-            <img
-              src={gallery[zoomIndex]}
-              sizes="100vw"
-              alt={`Zoomed photo ${zoomIndex}`}
-              className="imageModal__zoom_img"
-              loading='lazy'
-            />
-        <span className='imageModal__zoom_right' onClick={() => handleSwitchRight(zoomIndex)}> <Image src="/arrowright.png" width={30} height={30} alt=''/> </span>
-          </section>
-          <Backdrop onCancel={handleClose} />
+        <div className="zoom">
+          <div className="imageModal__zoom_container">
+            <section className="imageModal__zoom">
+              <CloseButton
+                onClick={handleClose}
+                className="zoom__button_close"
+              />
+              <span
+                className="imageModal__zoom_left"
+                onClick={() => handleSwitchLeft(zoomIndex)}
+              >
+                {' '}
+                <Image
+                  src="/arrowleft.png"
+                  width={30}
+                  height={30}
+                  alt=""
+                />{' '}
+              </span>
+              <img
+                src={gallery[zoomIndex]}
+                sizes="100vw"
+                alt={`Zoomed photo ${zoomIndex}`}
+                className="imageModal__zoom_img"
+                loading="lazy"
+              />
+              <span
+                className="imageModal__zoom_right"
+                onClick={() => handleSwitchRight(zoomIndex)}
+              >
+                {' '}
+                <Image
+                  src="/arrowright.png"
+                  width={30}
+                  height={30}
+                  alt=""
+                />{' '}
+              </span>
+            </section>
+            <Backdrop onCancel={handleClose} />
+          </div>
         </div>
-              </div>
       )}
     </section>
   )

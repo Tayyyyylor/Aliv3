@@ -74,18 +74,18 @@
     &_left {
       position: absolute;
       top: 50%;
-      left: 25%;
+      left: 200px;
       transform: translate(-50%, -50%);
-    color: white;
-    z-index: 200;
-    cursor: pointer;
+      color: white;
+      z-index: 200;
+      cursor: pointer;
     }
 
     &_right {
       position: absolute;
       top: 50%;
       cursor: pointer;
-      right: 25%;
+      right: 200px;
       transform: translate(-50%, -50%);
       color: white;
       z-index: 200;
@@ -95,4 +95,12 @@
 
 .zoom {
   width: 100%;
+
+  &__button_close {
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    color: white;
+    left: 30px;
+  }
 }

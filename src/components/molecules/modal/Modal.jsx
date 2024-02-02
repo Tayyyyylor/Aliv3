@@ -2,7 +2,6 @@ import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import React from 'react'
 
 export default function Modal({ title, desc, onClick, subtitle, src, srcMp4 }) {
-
   return (
     <>
       <section className="modal">
