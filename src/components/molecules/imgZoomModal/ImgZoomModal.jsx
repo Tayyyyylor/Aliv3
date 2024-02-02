@@ -16,7 +16,7 @@ export default function ImgZoomModal({ label, onClick, gallery }) {
             sizes="100vw"
             alt={`Photo ${index}`}
             className="imageModal__img"
-            loading='lazy'
+            loading="lazy"
           />
         ))}
       </div>
