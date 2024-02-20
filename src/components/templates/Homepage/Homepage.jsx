@@ -4,6 +4,7 @@ import { cardsData } from './Films.utils'
 import Cards from '@/components/molecules/cards/Cards'
 import Modal from '@/components/molecules/modal/Modal'
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
+// import Example from '@/helpers/Anim'
 
 export default function HomepageTemplate() {
   const [showVideo, setShowVideo] = useState(false)
@@ -43,6 +44,9 @@ export default function HomepageTemplate() {
   }
   return (
     <>
+      {/* <div className='test'>
+        <Example />
+      </div> */}
       <div className="intro">
         <div className="intro__video">
           <video

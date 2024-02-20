@@ -17,7 +17,6 @@ export default function Cards({
 }) {
   const [isHover, setIsHover] = useState(false)
   const [blank, setBlank] = useState(true)
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -54,7 +53,7 @@ export default function Cards({
       onMouseEnter={() => isHoverEnabled && setIsHover(true)}
       onMouseLeave={() => isHoverEnabled && setIsHover(false)}
     >
-      {isHoverEnabled && isHover && videoLoaded ? (
+      {isHoverEnabled && isHover ? (
         <div className="cards__video_container">
           
           <div className="cards__container_img">
@@ -64,7 +63,6 @@ export default function Cards({
               loading="lazy"
               loop
               className="cards__video cards__img"
-              onLoadedData={() => setVideoLoaded(true)}
             >
               <source src={gif} type="video/webm" />
             </video>
