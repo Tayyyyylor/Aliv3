@@ -45,10 +45,9 @@ export default function HomepageTemplate() {
       <div className="intro">
         <div className="intro__video">
           <video
-            loading="lazy"
             className="video"
             ref={videoRef}
-            preload="auto"
+            preload="metadata"
             muted={showVideo ? false : true}
             autoPlay
             controls={showVideo ? true : false}
