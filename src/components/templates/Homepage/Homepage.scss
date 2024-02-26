@@ -15,7 +15,7 @@
     width: 100%;
     position: relative;
     height: 100vh;
-    object-fit: contain;
+    object-fit: cover;
     @media screen and (min-width: $lg) {
       height: 100%;
     }
@@ -63,10 +63,11 @@
   background-color: black;
   height: 90vh;
   margin-top: 56.5px;
-
+  object-fit: cover;
   @media screen and (min-width: $lg) {
     height: 100%;
     margin-top: 71px;
+    object-fit: none;
   }
 
   @media screen and (min-width: $xlg) {
@@ -74,17 +75,6 @@
   }
 }
 
-@keyframes clignotte {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
 
 .work {
   width: 100%;
@@ -141,9 +131,3 @@
     }
   }
 }
-
-// .test {
-//   width: 100%;
-//   background-color: black;
-//   height: 100vh;
-// }

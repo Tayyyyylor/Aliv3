@@ -4,7 +4,6 @@ import { cardsData } from './Films.utils'
 import Cards from '@/components/molecules/cards/Cards'
 import Modal from '@/components/molecules/modal/Modal'
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
-// import Example from '@/helpers/Anim'
 
 export default function HomepageTemplate() {
   const [showVideo, setShowVideo] = useState(false)
@@ -14,7 +13,6 @@ export default function HomepageTemplate() {
   const videoRef = useRef(null)
 
   const filmRef = useRef(null)
-
 
 
   const handleWatch = () => {
@@ -44,9 +42,6 @@ export default function HomepageTemplate() {
   }
   return (
     <>
-      {/* <div className='test'>
-        <Example />
-      </div> */}
       <div className="intro">
         <div className="intro__video">
           <video
@@ -58,8 +53,8 @@ export default function HomepageTemplate() {
             autoPlay
             controls={showVideo ? true : false}
           >
-            <source src="/reeelWebm.webm" type="video/webm" />
-            <source src="/reelAccueil.mp4" type="video/mp4" />
+            <source src="/reeel23.webm" type="video/webm" />
+            <source src="/reeel23.mp4" type="video/mp4" />
           </video>
           <div className="intro__cta_container">
             <h2 className="intro__button_title">introduction</h2>
