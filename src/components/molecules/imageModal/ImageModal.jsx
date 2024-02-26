@@ -3,11 +3,16 @@ import Backdrop from '@/components/atoms/backdrop/Backdrop'
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import Title from '@/components/atoms/title/Title'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function ImageModal({ label, onClick, gallery }) {
   const [zoom, setZoom] = useState(false)
   const [zoomIndex, setZoomIndex] = useState(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1024)
+  }, [])
 
   const handleClick = index => {
     setZoom(true)
@@ -54,18 +59,21 @@ export default function ImageModal({ label, onClick, gallery }) {
                 onClick={handleClose}
                 className="zoom__button_close"
               />
-              <span
+              {!isMobile && (
+
+                <span
                 className="imageModal__zoom_left"
                 onClick={() => handleSwitchLeft(zoomIndex)}
-              >
+                >
                 
                 <Image
                   src="/arrowleft.png"
                   width={30}
                   height={30}
                   alt=""
-                />
+                  />
               </span>
+                  )}
               <img
                 src={gallery[zoomIndex]}
                 sizes="100vw"
@@ -73,18 +81,21 @@ export default function ImageModal({ label, onClick, gallery }) {
                 className="imageModal__zoom_img"
                 loading="lazy"
               />
-              <span
+              {!isMobile && (
+
+                <span
                 className="imageModal__zoom_right"
                 onClick={() => handleSwitchRight(zoomIndex)}
-              >
+                >
               
                 <Image
                   src="/arrowright.png"
                   width={30}
                   height={30}
                   alt=""
-                />
+                  />
               </span>
+                  )}
             </section>
             <Backdrop onCancel={handleClose} />
           </div>
