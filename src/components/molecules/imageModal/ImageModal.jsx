@@ -58,13 +58,13 @@ export default function ImageModal({ label, onClick, gallery }) {
                 className="imageModal__zoom_left"
                 onClick={() => handleSwitchLeft(zoomIndex)}
               >
-                {' '}
+                
                 <Image
                   src="/arrowleft.png"
                   width={30}
                   height={30}
                   alt=""
-                />{' '}
+                />
               </span>
               <img
                 src={gallery[zoomIndex]}
@@ -77,13 +77,13 @@ export default function ImageModal({ label, onClick, gallery }) {
                 className="imageModal__zoom_right"
                 onClick={() => handleSwitchRight(zoomIndex)}
               >
-                {' '}
+              
                 <Image
                   src="/arrowright.png"
                   width={30}
                   height={30}
                   alt=""
-                />{' '}
+                />
               </span>
             </section>
             <Backdrop onCancel={handleClose} />
