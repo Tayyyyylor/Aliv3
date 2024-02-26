@@ -47,10 +47,11 @@ export default function HomepageTemplate() {
           <video
             className="video"
             ref={videoRef}
-            preload="metadata"
+            preload= "auto"
             muted={showVideo ? false : true}
             autoPlay
             controls={showVideo ? true : false}
+            playsInline
           >
             <source src="/reeelWebm.webm" type="video/webm" />
             <source src="/reelAccueil.mp4" type="video/mp4" />
