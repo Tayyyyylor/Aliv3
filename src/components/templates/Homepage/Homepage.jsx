@@ -52,8 +52,8 @@ export default function HomepageTemplate() {
             muted={showVideo ? false : true}
             controls={showVideo ? true : false}
           >
-            <source src="/reeel23.mp4" type="video/mp4" />
             <source src="/reeel23.webm" type="video/webm" />
+            <source src="/reeel23.mp4" type="video/mp4" />
           </video>
           <div className="intro__cta_container">
             <h2 className="intro__button_title">introduction</h2>
