@@ -45,7 +45,6 @@ export default function Cards({
   })
  
 
-  console.log('isHover', isHover)
   return (
     <section
       className={`cards ${sizeClassName}`}

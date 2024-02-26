@@ -6,7 +6,7 @@
   z-index: 20;
   height: 100%;
   position: sticky;
-  color: white; /* Couleur du texte, ajustez selon votre design */
+  color: rgb(255, 255, 255); /* Couleur du texte, ajustez selon votre design */
 
   @media screen and (min-width: $lg) {
   }
@@ -60,7 +60,6 @@
 
 .video {
   width: 100%;
-  background-color: black;
   height: 90vh;
   margin-top: 56.5px;
   object-fit: cover;
