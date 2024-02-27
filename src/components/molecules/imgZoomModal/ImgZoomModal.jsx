@@ -5,7 +5,7 @@ import React from 'react'
 // import Slider from 'react-slick';
 
 
-export default function ImgZoomModal({ label, onClick, gallery }) {
+export default function ImgZoomModal({ label, onClick }) {
   // const settings = {
   //   dots: false,
   //   arrows: false,
