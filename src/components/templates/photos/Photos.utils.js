@@ -1,7 +1,7 @@
 export const cardsData = [
   {
     src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1703958818/1%20LSC%20T1000%20-%20LE%20COCQ%20SPORTIF/insta_LE_COQ-5_phfzwe.jpg',
-    alt: 'caca',
+    alt: '',
     label: 'LSC T1000 - LE COQ SPORTIF',
     subtitle: 'PHOTO SET',
     gallery: [
@@ -36,7 +36,7 @@ export const cardsData = [
   },
   {
     src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1703958820/2%20YARO%20-%20INTERIMAIRE/MKZ02027_zgbuac.jpg',
-    alt: 'caca',
+    alt: '',
     label: 'INTERIMAIRE - YARO',
     subtitle: 'PHOTO SET',
     gallery: [
@@ -135,7 +135,7 @@ export const cardsData = [
   },
   {
     src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1703958834/5%20NORTH%20FAKE/Andrea_et_Juliette_master-5_udgcuq.jpg',
-    alt: 'caca',
+    alt: '',
     label: 'NORTHFAKE',
     subtitle: 'PHOTO SET',
     gallery: [

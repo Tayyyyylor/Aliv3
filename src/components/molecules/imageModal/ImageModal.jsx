@@ -5,6 +5,7 @@ import Title from '@/components/atoms/title/Title'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
+
 export default function ImageModal({ label, onClick, gallery }) {
   const [zoom, setZoom] = useState(false)
   const [zoomIndex, setZoomIndex] = useState(null)
@@ -14,14 +15,43 @@ export default function ImageModal({ label, onClick, gallery }) {
     setIsMobile(window.innerWidth < 1024)
   }, [])
 
+  const enterFullscreen = (element) => {
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+  };
+
+  const exitFullscreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  };
+
   const handleClick = index => {
+    const imageElement = document.getElementById(`img-${index}`);
+    setZoom(true);
     setZoom(true)
     setZoomIndex(index)
+    isMobile && (enterFullscreen(imageElement))
+    
   }
 
   const handleClose = () => {
     setZoom(false)
     setZoomIndex(null)
+    isMobile && (exitFullscreen())
   }
 
   const handleSwitchLeft = index => {
@@ -33,6 +63,8 @@ export default function ImageModal({ label, onClick, gallery }) {
     const newIndex = index + 1
     setZoomIndex(newIndex >= gallery.length ? 0 : newIndex)
   }
+
+  
 
   return (
     <section className="imageModal">
@@ -48,6 +80,7 @@ export default function ImageModal({ label, onClick, gallery }) {
             alt={`Photo ${index}`}
             className="imageModal__img"
             loading="lazy"
+            id={`img-${index}`}
           />
         ))}
       </div>
@@ -60,12 +93,10 @@ export default function ImageModal({ label, onClick, gallery }) {
                 className="zoom__button_close"
               />
               {!isMobile && (
-
                 <span
                 className="imageModal__zoom_left"
                 onClick={() => handleSwitchLeft(zoomIndex)}
                 >
-                
                 <Image
                   src="/arrowleft.png"
                   width={30}
