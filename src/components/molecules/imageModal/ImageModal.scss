@@ -12,7 +12,10 @@
   overflow-y: auto;
 
   &__title {
-    margin-top: 23px;
+    margin-top: 50px;
+    @media screen and (min-width: $lg) {
+      margin-top: 23px;
+    }
   }
 
   &__img_container {
