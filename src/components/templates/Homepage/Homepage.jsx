@@ -57,7 +57,7 @@ export default function HomepageTemplate() {
             <source src="/reeel23.mp4" type="video/mp4" />
             <source src="/reeel23.webm" type="video/webm" />
           </video>
-          <div className="intro__cta_container">
+          <div className={showVideo ? "intro__none" : "intro__cta_container"}>
             <h2 className="intro__button_title">introduction</h2>
             <DefaultButton
               label="▶"
