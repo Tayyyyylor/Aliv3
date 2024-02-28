@@ -71,7 +71,7 @@
   }
   @media screen and (min-width: $xlg) {
     margin: none;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
