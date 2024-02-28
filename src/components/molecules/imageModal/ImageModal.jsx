@@ -69,7 +69,7 @@ export default function ImageModal({ label, onClick, gallery }) {
   
 
   return (
-    <section className="imageModal">
+    <section className={`imageModal ${zoom ? 'zoomed' : ''}`}>
       <Title label={label} className="imageModal__title" />
       <CloseButton onClick={onClick} className="imageModal__button" />
       <div className="imageModal__img_container">
