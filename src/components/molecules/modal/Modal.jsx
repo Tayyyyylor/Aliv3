@@ -10,8 +10,6 @@ export default function Modal({ title, desc, onClick, subtitle, src, srcMp4 }) {
           <video
             className="modal__video_vid"
             preload="none"
-            muted
-            autoPlay
             controls
             loading="lazy"
           >
