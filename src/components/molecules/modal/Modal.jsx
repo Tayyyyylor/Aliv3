@@ -1,7 +1,14 @@
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Modal({ title, desc, onClick, subtitle, src, srcMp4 }) {
+
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1024)
+  }, [])
+
   return (
     <>
       <section className="modal">
@@ -9,7 +16,9 @@ export default function Modal({ title, desc, onClick, subtitle, src, srcMp4 }) {
         <div className="modal__video">
           <video
             className="modal__video_vid"
-            preload="none"
+            preload="metadata"
+            autoPlay={!isMobile && true}
+            muted={!isMobile && true}
             controls
             loading="lazy"
           >

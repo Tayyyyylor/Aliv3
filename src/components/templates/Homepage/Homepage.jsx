@@ -49,8 +49,7 @@ export default function HomepageTemplate() {
             ref={videoRef}
             preload= "auto"
             autoPlay
-            loop
-            playsInline
+            playsInline={showVideo ? false : true}
             muted={showVideo ? false : true}
             controls={showVideo ? true : false}
           >
