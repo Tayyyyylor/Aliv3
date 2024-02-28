@@ -16,7 +16,7 @@ export default function Modal({ title, desc, onClick, subtitle, src, srcMp4 }) {
         <div className="modal__video">
           <video
             className="modal__video_vid"
-            preload="metadata"
+            preload="auto"
             autoPlay={!isMobile && true}
             muted={!isMobile && true}
             controls
