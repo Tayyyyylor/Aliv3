@@ -3,6 +3,7 @@ import Cards from '@/components/molecules/cards/Cards'
 import ImageModal from '@/components/molecules/imageModal/ImageModal'
 import React, { useState } from 'react'
 import { cardsData } from './Photos.utils'
+// import Slider from '@/components/molecules/Slider/Slider'
 
 export default function PhotosTemplate() {
   const [showModal, setShowModal] = useState(false)
@@ -46,6 +47,9 @@ export default function PhotosTemplate() {
             desc={selectedCardData.desc}
             gallery={selectedCardData.gallery}
           />
+          // <Slider 
+          // gallery={selectedCardData.gallery}
+          // />
         )}
       </div>
       {showModal && <Backdrop onCancel={handleClose} />}

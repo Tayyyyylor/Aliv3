@@ -4,7 +4,8 @@ import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import Title from '@/components/atoms/title/Title'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import SwipeableViews from 'react-swipeable-views-react-18-fix';
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 
 
 
@@ -76,8 +77,11 @@ export default function ImageModal({ label, onClick, gallery }) {
       <CloseButton onClick={onClick} className="imageModal__button" />
       <div className="imageModal__img_container">
         {gallery.map((src, index) => (
+          <Swiper
+          key={index}
+          >
+            <SwiperSlide>
           <img
-            key={index}
             onClick={() => handleClick(index)}
             src={src}
             sizes="100vw"
@@ -85,14 +89,16 @@ export default function ImageModal({ label, onClick, gallery }) {
             className="imageModal__img"
             loading="lazy"
             id={`img-${index}`}
-          />
+            />
+            </SwiperSlide>
+            </Swiper>
         ))}
       </div>
       {zoom && (
-                 <SwipeableViews>
-       
         <div className="zoom">
           <div className="imageModal__zoom_container">
+   
+
             <section className="imageModal__zoom">
               <CloseButton
                 onClick={handleClose}
@@ -137,8 +143,6 @@ export default function ImageModal({ label, onClick, gallery }) {
             <Backdrop onCancel={handleClose} />
           </div>
         </div>
-        </SwipeableViews>
-
       )}
     </section>
   )
