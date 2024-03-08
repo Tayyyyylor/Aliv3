@@ -1,28 +1,21 @@
-
 .slider {
-
-    
-    &__img_container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__img {
-        max-width: 100%;
- 
-    height: 100%;
-    object-fit: cover;
-  
-    }
-    gap: 3px; /* Espace entre les images */
-    margin-top: 30px;
-    cursor: pointer;
-    @media screen and (min-width: $lg) {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr); /* Trois colonnes égales */
-      grid-auto-rows: minmax(100px, auto);
-    }
+  &__img_container {
+    display: flex;
+    flex-direction: column;
   }
 
+  &__img {
+    max-width: 100%;
 
-
+    height: 100%;
+    object-fit: cover;
+  }
+  gap: 3px; /* Espace entre les images */
+  margin-top: 30px;
+  cursor: pointer;
+  @media screen and (min-width: $lg) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Trois colonnes égales */
+    grid-auto-rows: minmax(100px, auto);
+  }
+}

@@ -11,14 +11,12 @@ export default function PhotosTemplate() {
   const handleClick = cardIndex => {
     setShowModal(true)
     setSelectedCardData(cardsData[cardIndex])
-    console.log('Selected Card Data:', cardsData[cardIndex]);
   }
 
   const handleClose = () => {
     setShowModal(false)
     setSelectedCardData(null)
   }
-
 
   return (
     <main className="photos">
