@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react'
 
 
 export default function ImageModal({ label, onClick, gallery }) {
-  // const [zoom, setZoom] = useState(false)
   const [zoomIndex, setZoomIndex] = useState(null)
   // eslint-disable-next-line no-unused-vars
   const [isMobile, setIsMobile] = useState(false)
@@ -16,7 +15,7 @@ export default function ImageModal({ label, onClick, gallery }) {
     setIsMobile(window.innerWidth < 1024)
   }, [])
 
-  const openFullScreen = (index) => {
+  const openFullScreen = index => {
     setZoomIndex(index);
   };
 
@@ -44,10 +43,9 @@ export default function ImageModal({ label, onClick, gallery }) {
             loading="lazy"
             id={`img-${index}`}
             />
-
         ))}
       </div>
-      {zoomIndex && (
+      {zoomIndex !== null && (
         <div className="fullscreen-modal" onClick={closeFullScreen}>
           <img src={gallery[zoomIndex]} className="fullscreen-modal-img"  sizes="100vw"
                 alt={`Zoomed photo ${zoomIndex}`} />

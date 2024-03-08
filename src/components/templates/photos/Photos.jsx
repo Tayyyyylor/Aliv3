@@ -11,6 +11,7 @@ export default function PhotosTemplate() {
   const handleClick = cardIndex => {
     setShowModal(true)
     setSelectedCardData(cardsData[cardIndex])
+    console.log('Selected Card Data:', cardsData[cardIndex]);
   }
 
   const handleClose = () => {
@@ -18,7 +19,6 @@ export default function PhotosTemplate() {
     setSelectedCardData(null)
   }
 
-  console.log('selectedCardData.gallery', selectedCardData?.gallery[2])
 
   return (
     <main className="photos">
