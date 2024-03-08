@@ -1,31 +1,30 @@
-import { useLottie, useLottieInteractivity } from "lottie-react";
-import introAnim from "../../public/AnimationALI.json"
-
+import { useLottie, useLottieInteractivity } from 'lottie-react'
+import introAnim from '../../public/AnimationALI.json'
 
 const options = {
   animationData: introAnim,
-};
+}
 
 const Example = () => {
-  const lottieObj = useLottie(options);
+  const lottieObj = useLottie(options)
   const Animation = useLottieInteractivity({
     lottieObj,
-    mode: "scroll",
+    mode: 'scroll',
     actions: [
-        {
-          visibility: [0, 0.45],
-          type: "stop",
-          frames: [0],
-        },
-        {
-          visibility: [0.45, 1],
-          type: "seek",
-          frames: [0, 300],
-        },
-      ],
-    });
+      {
+        visibility: [0, 0.45],
+        type: 'stop',
+        frames: [0],
+      },
+      {
+        visibility: [0.45, 1],
+        type: 'seek',
+        frames: [0, 300],
+      },
+    ],
+  })
 
-  return Animation;
-};
+  return Animation
+}
 
-export default Example;
+export default Example

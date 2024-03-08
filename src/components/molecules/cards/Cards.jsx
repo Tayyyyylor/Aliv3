@@ -43,7 +43,6 @@ export default function Cards({
       }
     )
   })
- 
 
   return (
     <section
@@ -54,7 +53,6 @@ export default function Cards({
     >
       {isHoverEnabled && isHover ? (
         <div className="cards__video_container">
-          
           <div className="cards__container_img">
             <video
               autoPlay

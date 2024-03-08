@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import DefaultButton from '@/components/atoms/buttons/defaultButton/DefaultButton'
 import { cardsData } from './Films.utils'
 import Cards from '@/components/molecules/cards/Cards'
@@ -13,7 +13,6 @@ export default function HomepageTemplate() {
   const videoRef = useRef(null)
 
   const filmRef = useRef(null)
-
 
   const handleWatch = () => {
     setShowVideo(true)
@@ -47,7 +46,7 @@ export default function HomepageTemplate() {
           <video
             className="video"
             ref={videoRef}
-            preload= "auto"
+            preload="auto"
             autoPlay
             loop={showVideo ? false : true}
             playsInline
@@ -57,7 +56,7 @@ export default function HomepageTemplate() {
             <source src="/reeel23.mp4" type="video/mp4" />
             <source src="/reeel23.webm" type="video/webm" />
           </video>
-          <div className={showVideo ? "intro__none" : "intro__cta_container"}>
+          <div className={showVideo ? 'intro__none' : 'intro__cta_container'}>
             <h2 className="intro__button_title">introduction</h2>
             <DefaultButton
               label="▶"
@@ -83,7 +82,6 @@ export default function HomepageTemplate() {
               sizeClassName="work__card_size"
               onClick={() => handleClick(index)}
               className="work__card_content"
-             
             />
           ))}
         </div>
