@@ -70,15 +70,15 @@ export default function ContactTemplate() {
     <main className="contact">
       <div className="contact__container">
         <div className="contact__img_container">
-          <div className='insta'>
-          <LogoRs
-            src={instagram}
-            priority={false}
-            alt=""
-            className="contact__img"
-            onClick={handleInstaClick}
+          <div className="insta">
+            <LogoRs
+              src={instagram}
+              priority={false}
+              alt=""
+              className="contact__img"
+              onClick={handleInstaClick}
             />
-            </div>
+          </div>
           <div className="contact__mail mail">
             <LogoRs
               src={mail}
@@ -89,15 +89,15 @@ export default function ContactTemplate() {
             />
             {alert && <p className="contact__alert">Email copied.</p>}
           </div>
-          <div className='behance'>
-          <LogoRs
-            src={behance}
-            priority={false}
-            alt=""
-            className="contact__img"
-            onClick={handleBehanceClick}
+          <div className="behance">
+            <LogoRs
+              src={behance}
+              priority={false}
+              alt=""
+              className="contact__img"
+              onClick={handleBehanceClick}
             />
-            </div>
+          </div>
         </div>
       </div>
     </main>

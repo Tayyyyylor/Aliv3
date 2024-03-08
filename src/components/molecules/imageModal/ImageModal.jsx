@@ -1,22 +1,65 @@
 /* eslint-disable @next/next/no-img-element */
-import Backdrop from '@/components/atoms/backdrop/Backdrop'
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import Title from '@/components/atoms/title/Title'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function ImageModal({ label, onClick, gallery }) {
-  const [zoom, setZoom] = useState(false)
   const [zoomIndex, setZoomIndex] = useState(null)
+  // eslint-disable-next-line no-unused-vars
+  const [isMobile, setIsMobile] = useState(false)
 
-  const handleClick = index => {
-    setZoom(true)
-    setZoomIndex(index)
-  }
+  const [touchStartX, setTouchStartX] = useState(null)
 
-  const handleClose = () => {
-    setZoom(false)
-    setZoomIndex(null)
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1024)
+  }, [])
+
+  useEffect(() => {
+    
+    
+    const handleTouchStart = e => {
+      setTouchStartX(e.touches[0].clientX)
+    }
+    
+    const handleTouchMove = e => {
+      if (touchStartX !== null) {
+        const touchEndX = e.touches[0].clientX
+        const deltaX = touchEndX - touchStartX
+        
+        if (deltaX > 50) {
+          // Swipe vers la droite
+          handleSwipe('left')
+        } else if (deltaX < -50) {
+          // Swipe vers la gauche
+          handleSwipe('right')
+        }
+      }
+    }
+      
+      const handleTouchEnd = () => {
+        setTouchStartX(null)
+      }
+      
+      window.addEventListener('touchstart', handleTouchStart)
+      window.addEventListener('touchmove', handleTouchMove)
+      window.addEventListener('touchend', handleTouchEnd)
+      
+      return () => {
+        window.removeEventListener('touchstart', handleTouchStart)
+        window.removeEventListener('touchmove', handleTouchMove)
+        window.removeEventListener('touchend', handleTouchEnd)
+      }
+      
+     
+  }, [touchStartX])
+
+  const handleSwipe = direction => {
+    if (zoomIndex !== null && isMobile) {
+      const nextIndex = direction === 'right' ? zoomIndex + 1 : zoomIndex - 1
+      const lastIndex = gallery.length - 1
+      setZoomIndex(Math.max(0, Math.min(nextIndex, lastIndex)))
+    }
   }
 
   const handleSwitchLeft = index => {
@@ -29,6 +72,15 @@ export default function ImageModal({ label, onClick, gallery }) {
     setZoomIndex(newIndex >= gallery.length ? 0 : newIndex)
   }
 
+  const openFullScreen = index => {
+    setZoomIndex(index)
+  }
+
+  const closeFullScreen = () => {
+    setZoomIndex(null)
+  }
+
+
   return (
     <section className="imageModal">
       <Title label={label} className="imageModal__title" />
@@ -37,45 +89,36 @@ export default function ImageModal({ label, onClick, gallery }) {
         {gallery.map((src, index) => (
           <img
             key={index}
-            onClick={() => handleClick(index)}
+            onClick={() => openFullScreen(index)}
             src={src}
             sizes="100vw"
             alt={`Photo ${index}`}
             className="imageModal__img"
             loading="lazy"
+            id={`img-${index}`}
           />
         ))}
       </div>
-      {zoom && (
-        <div className="zoom">
-          <div className="imageModal__zoom_container">
-            <section className="imageModal__zoom">
-              <CloseButton
-                onClick={handleClose}
-                className="zoom__button_close"
-              />
+      {zoomIndex !== null && (
+        <div className="fullscreen-modal" onClick={closeFullScreen}>
+          {!isMobile ? (
+            <>
+              <CloseButton onClick={closeFullScreen} className="zoom__button_close" />
               <span
                 className="imageModal__zoom_left"
-                onClick={() => handleSwitchLeft(zoomIndex)}
+                onClick={(e) => {e.stopPropagation(); handleSwitchLeft(zoomIndex)}}
               >
-                
-                <Image
-                  src="/arrowleft.png"
-                  width={30}
-                  height={30}
-                  alt=""
-                />
+                <Image src="/arrowleft.png" width={30} height={30} alt="" />
               </span>
               <img
                 src={gallery[zoomIndex]}
+                className="fullscreen-modal-img"
                 sizes="100vw"
                 alt={`Zoomed photo ${zoomIndex}`}
-                className="imageModal__zoom_img"
-                loading="lazy"
               />
               <span
                 className="imageModal__zoom_right"
-                onClick={() => handleSwitchRight(zoomIndex)}
+                onClick={(e) =>{e.stopPropagation(); handleSwitchRight(zoomIndex)}}
               >
               
                 <Image
@@ -85,9 +128,18 @@ export default function ImageModal({ label, onClick, gallery }) {
                   alt=""
                 />
               </span>
-            </section>
-            <Backdrop onCancel={handleClose} />
-          </div>
+            </>
+          ) : (
+            <>
+              <CloseButton onClick={closeFullScreen} className="zoom__button_close" />
+              <img
+                src={gallery[zoomIndex]}
+                className="fullscreen-modal-img"
+                sizes="100vw"
+                alt={`Zoomed photo ${zoomIndex}`}
+              />
+            </>
+          )}
         </div>
       )}
     </section>
