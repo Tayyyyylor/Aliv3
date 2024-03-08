@@ -102,6 +102,7 @@ export default function HomepageTemplate() {
                 isSliderEnabled={selectedCardData.isSliderEnabled}
                 src={selectedCardData.video}
                 srcMp4={selectedCardData.srcMp4}
+                previewImg={selectedCardData.src}
               />
             </>
           )}

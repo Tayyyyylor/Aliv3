@@ -139,4 +139,8 @@
   max-height: 100vh;
   object-fit: contain;
   cursor: pointer;
+
+  @media screen and (max-width: $md) {
+  width: 100%;
+  }
 }
