@@ -11,6 +11,51 @@ export default function ImageModal({ label, onClick, gallery }) {
   // eslint-disable-next-line no-unused-vars
   const [isMobile, setIsMobile] = useState(false)
 
+  const [touchStartX, setTouchStartX] = useState(null);
+
+  useEffect(() => {
+    const handleTouchStart = (e) => {
+      setTouchStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+      if (touchStartX !== null) {
+        const touchEndX = e.touches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+
+        if (deltaX > 50) {
+          // Swipe vers la droite
+          handleSwipe('left');
+        } else if (deltaX < -50) {
+          // Swipe vers la gauche
+          handleSwipe('right');
+        }
+      }
+    };
+
+    const handleTouchEnd = () => {
+      setTouchStartX(null);
+    };
+
+    window.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [touchStartX]);
+
+  const handleSwipe = (direction) => {
+    if (zoomIndex !== null) {
+      const nextIndex = direction === 'right' ? zoomIndex + 1 : zoomIndex - 1;
+      const lastIndex = gallery.length - 1;
+
+      setZoomIndex(Math.max(0, Math.min(nextIndex, lastIndex)));
+    }
+  };
   useEffect(() => {
     setIsMobile(window.innerWidth < 1024)
   }, [])
@@ -28,7 +73,7 @@ export default function ImageModal({ label, onClick, gallery }) {
   console.log('zoomIndex', zoomIndex)
 
   return (
-    <section className='imageModal'>
+    <section className='imageModal' >
       <Title label={label} className="imageModal__title" />
       <CloseButton onClick={onClick} className="imageModal__button" />
       <div className="imageModal__img_container">
