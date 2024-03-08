@@ -58,7 +58,6 @@ export default function ImageModal({ label, onClick, gallery }) {
     if (zoomIndex !== null && isMobile) {
       const nextIndex = direction === 'right' ? zoomIndex + 1 : zoomIndex - 1
       const lastIndex = gallery.length - 1
-      console.log("wtf on est la ou pas ");
       setZoomIndex(Math.max(0, Math.min(nextIndex, lastIndex)))
     }
   }
@@ -81,7 +80,6 @@ export default function ImageModal({ label, onClick, gallery }) {
     setZoomIndex(null)
   }
 
-  console.log('zoomIndex', zoomIndex)
 
   return (
     <section className="imageModal">
