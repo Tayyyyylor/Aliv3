@@ -33,11 +33,9 @@
     background-color: white;
     position: relative;
   }
-  // &__container_video {
-  //   overflow: hidden;
-  //   background-color: white;
-  //   position: relative;
-  // }
+  &__video_container {
+    height: 100%;
+  }
   &__video {
     width: 100%;
   }
