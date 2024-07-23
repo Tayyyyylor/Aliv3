@@ -1,5 +1,19 @@
 export const cardsData = [
   {
+    src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1721746500/14%20ILLUSIONZ/Capture_d_e%CC%81cran_2024-07-23_a%CC%80_16.06.18_tftnfd_c_pad_w_500_fptuk9.jpg',
+    srcMp4:
+      'https://res.cloudinary.com/dna8sibxu/video/upload/v1721745631/14%20ILLUSIONZ/ILLUSIONZ_OFFICIEL_2_xfhvqz.mp4',
+    video:
+      'https://res.cloudinary.com/dna8sibxu/video/upload/v1721745630/14%20ILLUSIONZ/ILLUSIONZ_OFFICIEL_2_b3ijlh.webm',
+    gif: 'https://res.cloudinary.com/dna8sibxu/video/upload/v1721744544/14%20ILLUSIONZ/EXTRAIT_ILLUSIONZ_lx1k5c.webm',
+    gifMp4:
+      'https://res.cloudinary.com/dna8sibxu/video/upload/v1721744545/14%20ILLUSIONZ/EXTRAIT_ILLUSIONZ_xmcro6.mp4',
+    alt: 'ILlUSIONZ',
+    label: 'ILlUSIONZ - ',
+    subtitle: 'Directing/Framing/Editing',
+    desc: 'A young girl, faced with the dilemmas of the future, uses dance to find her way, thus offering her the clarity necessary to define her destiny.',
+  },
+  {
     src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1703960750/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_VIGNETTE_porvex_16-9_ybr4x1.jpg',
     srcMp4:
       'https://res.cloudinary.com/dna8sibxu/video/upload/v1704484585/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_-_SOYYMIMY_w25zpq.mp4',
