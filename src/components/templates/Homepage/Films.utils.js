@@ -5,13 +5,151 @@ export const cardsData = [
       'https://res.cloudinary.com/dna8sibxu/video/upload/v1721745631/14%20ILLUSIONZ/ILLUSIONZ_OFFICIEL_2_xfhvqz.mp4',
     video:
       'https://res.cloudinary.com/dna8sibxu/video/upload/v1721745630/14%20ILLUSIONZ/ILLUSIONZ_OFFICIEL_2_b3ijlh.webm',
-    gif: 'https://res.cloudinary.com/dna8sibxu/video/upload/v1721744544/14%20ILLUSIONZ/EXTRAIT_ILLUSIONZ_lx1k5c.webm',
+    gif: 'https://res.cloudinary.com/dna8sibxu/video/upload/v1721750644/14%20ILLUSIONZ/EXTRAIT_ILLUSIONZ_1_z8cdbg.webm',
     gifMp4:
-      'https://res.cloudinary.com/dna8sibxu/video/upload/v1721744545/14%20ILLUSIONZ/EXTRAIT_ILLUSIONZ_xmcro6.mp4',
-    alt: 'ILlUSIONZ',
-    label: 'ILlUSIONZ - ',
+      'https://res.cloudinary.com/dna8sibxu/video/upload/v1721750643/14%20ILLUSIONZ/EXTRAIT_ILLUSIONZ_1_mvzm5h.mp4',
+    alt: 'ILLUSIONZ',
+    label: 'ILLUSIONZ - ALI BENSAALI',
     subtitle: 'Directing/Framing/Editing',
-    desc: 'A young girl, faced with the dilemmas of the future, uses dance to find her way, thus offering her the clarity necessary to define her destiny.',
+    isScrollable: 'true',
+    desc: `MUSIC by Ambre ft BEAM x Destin Conrad
+
+1st ROLE
+LIONEL GUALABLE
+
+WRITING and ART DIRECTION
+MYA MONTALVAN
+
+DIRECTION
+ALI BENSAALI
+
+PRODUCTION DIRECTOR
+SAAD JALAL
+PRODUCTION MANAGER
+MOHAMED SIRELKHATIM
+MAXIME JOUSSERAND
+
+DOP
+MAXIME HEMERY
+
+EDITING/VFX
+ALI BENSAALI
+
+3D CONCEPTION
+PIERRE ALBERTELLI
+MATIS JOLI
+
+DIRECTION ASSIST
+SAAD JALAL
+2nd DIRECTION ASSIST
+GABRIEL CANTAL
+
+SECONDARY ROLES
+MARIAH KOFFI
+ANAEL GONZALEZ
+PALOMA MONTALVAN
+
+CAMERA ASSIST
+MOUNIR OUAQQA
+NINO LE GALL
+
+GAFFER
+ARTHUR GOSNAT
+ELECTRICIANS
+SELIM CHEBBI
+MARTIN GILLET
+TUGDUAL LECLERC
+KEY GRIP
+MORVEUX
+RAVI POUSSEUR
+
+PRODUCTION ASSIST
+RAPHAEL DE ALBUQUERQUE
+MOUHAMADOU SISSOKO
+BRYAN HOUBLON
+CLEMENT DUPIRE
+
+ON SET COORDINATORS
+ANAEL GONZALEZ
+REVERSE
+
+FASHION STYLIST
+MYA MONTALVAN
+STYLIST ASSIST
+SOPHIE MAY
+REVERSE
+COSTUME DESIGNER for 1st ROLE
+CELESTE CLEDAT
+MAKEUP
+FATOU DANFAKHA
+HAIR
+LIZY HAYOT
+
+MOVEMENT DIRECTION
+MYA MONTALVAN
+
+CHOREOGRAPHY
+TATIANA LESELLIER
+MICHELLE VNUCK
+ANNABELLE HO BING HUANG
+ANAEL GONZALEZ
+MYA MONTALVAN
+ZACKARIA TOHE
+DANSERS 2ND PHASE
+HELENE ESMEL
+SAMUEL HENRI
+
+TYPO
+MORVEUX
+
+ON SET PHOTOGRAPHERS
+ROMANE
+MERCUCIO
+
+EXTRAS
+CHRISTINA JOSEPH
+JULIE BISTOQUET
+ALICIANE NDOUMBE
+ELISA SUAREZ
+MOUSTAPHA KEITA 
+EDGARD THION
+FLORIAN LAPOINTE
+FABIEN LAPOINTE
+BILEL KOUIDI
+CURTIS TCHAMI
+HANNA BERROA
+INES ALEJANDRA
+BILEL TAHRI
+NATHAN  KINSIONA
+DERECK PRUDENT
+SHANNON GERARD
+RAYAN OUM
+MOHAMED BENGUEDDACHE
+MATHIS JOLI
+REVERSE
+ZOE MEYNIER
+THALIA SANCHEZ
+MAKURA KABA
+CELIA SONVILLE
+LUDIVINE DA LUZ
+FATOU DANFAKHA
+LIZY HAYOT
+IBRAHIM DELISSE
+Réhane Dreistatd
+RILEYNA NYASSOKE
+MAËL KOUASSI
+JULIA AIELLO
+AKCIEL RÉGENT GONZALEZ
+DANIEL SANTOS MONTEROS
+AYÉLÉ GENTÉ
+JÉROME VAZ
+REHÀNE DREISTADT
+
+SPECIAL THANKS TO
+DÉPENDANT PRODUCTION
+VISUAL IMAGE
+ARTISTIC AGENCY
+ESPACE ALBATROS`,
   },
   {
     src: 'https://res.cloudinary.com/dna8sibxu/image/upload/v1703960750/1%20WAY%20OUT%20-%20Soyymimy/WAY_OUT_VIGNETTE_porvex_16-9_ybr4x1.jpg',
@@ -25,6 +163,7 @@ export const cardsData = [
     alt: 'dancer',
     label: 'WAY OUT - SOYYMIMY',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'A young girl, faced with the dilemmas of the future, uses dance to find her way, thus offering her the clarity necessary to define her destiny.',
   },
   {
@@ -39,6 +178,7 @@ export const cardsData = [
     alt: 'ulysse',
     label: 'NAUFRAGE - ULYSSE 2001',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'ULYSSE.2001 makes a solitary pilgrimage to a desert island, confronting two facets of his personality.',
   },
   {
@@ -53,6 +193,7 @@ export const cardsData = [
     alt: 'man holding a baby',
     label: 'SALEM - SHRO',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'Forced into exodus due to a political overthrow plunging the country into anarchy, a father leaves the city with his son. The story highlights the fact that reality happenning elsewhere can also happen at home, and vice versa.',
   },
   {
@@ -68,6 +209,7 @@ export const cardsData = [
     isSliderEnabled: 'true',
     label: 'UNDERGROUND EFFECT',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'Notorious Brand associates with La Villette for the event FREESTYLE, which brings together various urban disciplines. A collaboration highlighting the creativity and energy of urban cultures.',
   },
   {
@@ -81,6 +223,7 @@ export const cardsData = [
       'https://res.cloudinary.com/dna8sibxu/video/upload/v1704497798/5%20BIEN%20DANS%20LE%20NOIR%20-%20Timaru/EXTRAIT_BIEN_DANS_LE_NOIR_niizqt.mp4',
     alt: 'homme dans le noir',
     label: 'BIEN DANS LE NOIR - TIMARU',
+    isScrollable: 'false',
     subtitle: 'Framing/Editing',
     desc: `Excerpt from TIMARU's first project.
        Directed by NOÉ POULIN.
@@ -99,6 +242,7 @@ export const cardsData = [
     alt: 'so la lune',
     label: 'SO LA LUNE - LE COQ SPORTIF',
     subtitle: 'Framing',
+    isScrollable: 'false',
     desc: 'Advertising campaign produced by FEUILLE BLANCHE for LE COQ SPORTIF on the occasion of the release of the model LSC T1000.',
   },
   {
@@ -113,6 +257,7 @@ export const cardsData = [
     alt: 'lost',
     label: 'LOST - MAGDALEN ASYLUM',
     subtitle: 'Directing/Framing',
+    isScrollable: 'false',
     desc: `A rock band takes refuge in an isolated house to engage in musical training.
       Editing by VALENTIN VERNAGALLO.
        .`,
@@ -129,6 +274,7 @@ export const cardsData = [
     alt: 'sirop melon',
     label: 'SIROP MELON - NEFASTE',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'Two friends immerse themselves in the gangster lifestyle, but one gets drawn into the whirlwind of risky choices, leading to consequences he must face alone.',
   },
   {
@@ -143,6 +289,7 @@ export const cardsData = [
     alt: 'release party',
     label: 'RELEASE PARTY "TOUT DROIT" - YARO',
     subtitle: 'Framing/Editing',
+    isScrollable: 'false',
     desc: 'Yaro’s release party on the occasion of the release of his album “Tout Droit”.',
   },
   {
@@ -157,6 +304,7 @@ export const cardsData = [
     alt: 'combat de boxe',
     label: 'VALLEY - THE BOY',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'A young boy gets into an intense boxing match that tests his resilience and determination.',
   },
   {
@@ -171,6 +319,7 @@ export const cardsData = [
     alt: 'raxs',
     label: 'VILLE - RAXS',
     subtitle: 'Framing/Editing',
+    isScrollable: 'false',
     desc: 'Directed by Thomas Fernandez',
   },
   {
@@ -185,6 +334,7 @@ export const cardsData = [
     alt: 'rino',
     label: 'RINO - LAZ',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'Prisoner in a time loop, LAZ finds himself condemned to relive the moment of his own end. Executive producers: Laz,Hawa-Bell Keita Director of photography: Oviri Francou 1st assistant director:Hawa-Bell Keita Dancer:Stacy Pierre',
   },
   {
@@ -199,6 +349,7 @@ export const cardsData = [
     alt: 'homme dans voiture',
     label: 'TOUT VA BIEN - SHRO',
     subtitle: 'Directing/Framing/Editing',
+    isScrollable: 'false',
     desc: 'After years of absence, Shro is located by his team in the heart of the desert, where he had been captured.',
   },
 ]
