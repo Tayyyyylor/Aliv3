@@ -1,7 +1,7 @@
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 import React, { useEffect, useState } from 'react'
 
-export default function Modal({ title, desc, onClick, subtitle, src, srcMp4, previewImg }) {
+export default function Modal({ title, desc, onClick, subtitle, src, srcMp4, previewImg, isScrollable }) {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -27,7 +27,8 @@ export default function Modal({ title, desc, onClick, subtitle, src, srcMp4, pre
           </video>
         </div>
 
-        <div className="modal__text">
+        <div className={`modal__text ${isScrollable ? 'scrollable' : ''}`}>
+        <div className='blank'></div>
           <div>
             <h2 className="modal__title">{title}</h2>
             <p className="modal__subtitle">{subtitle}</p>

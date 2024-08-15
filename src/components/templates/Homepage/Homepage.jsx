@@ -103,6 +103,7 @@ export default function HomepageTemplate() {
                 src={selectedCardData.video}
                 srcMp4={selectedCardData.srcMp4}
                 previewImg={selectedCardData.src}
+                isScrollable={selectedCardData.isScrollable}
               />
             </>
           )}
