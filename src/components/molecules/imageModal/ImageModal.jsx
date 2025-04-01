@@ -16,17 +16,15 @@ export default function ImageModal({ label, onClick, gallery }) {
   }, [])
 
   useEffect(() => {
-    
-    
     const handleTouchStart = e => {
       setTouchStartX(e.touches[0].clientX)
     }
-    
+
     const handleTouchMove = e => {
       if (touchStartX !== null) {
         const touchEndX = e.touches[0].clientX
         const deltaX = touchEndX - touchStartX
-        
+
         if (deltaX > 50) {
           // Swipe vers la droite
           handleSwipe('left')
@@ -36,22 +34,20 @@ export default function ImageModal({ label, onClick, gallery }) {
         }
       }
     }
-      
-      const handleTouchEnd = () => {
-        setTouchStartX(null)
-      }
-      
-      window.addEventListener('touchstart', handleTouchStart)
-      window.addEventListener('touchmove', handleTouchMove)
-      window.addEventListener('touchend', handleTouchEnd)
-      
-      return () => {
-        window.removeEventListener('touchstart', handleTouchStart)
-        window.removeEventListener('touchmove', handleTouchMove)
-        window.removeEventListener('touchend', handleTouchEnd)
-      }
-      
-     
+
+    const handleTouchEnd = () => {
+      setTouchStartX(null)
+    }
+
+    window.addEventListener('touchstart', handleTouchStart)
+    window.addEventListener('touchmove', handleTouchMove)
+    window.addEventListener('touchend', handleTouchEnd)
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('touchmove', handleTouchMove)
+      window.removeEventListener('touchend', handleTouchEnd)
+    }
   }, [touchStartX])
 
   const handleSwipe = direction => {
@@ -80,7 +76,6 @@ export default function ImageModal({ label, onClick, gallery }) {
     setZoomIndex(null)
   }
 
-
   return (
     <section className="imageModal">
       <Title label={label} className="imageModal__title" />
@@ -103,10 +98,16 @@ export default function ImageModal({ label, onClick, gallery }) {
         <div className="fullscreen-modal" onClick={closeFullScreen}>
           {!isMobile ? (
             <>
-              <CloseButton onClick={closeFullScreen} className="zoom__button_close" />
+              <CloseButton
+                onClick={closeFullScreen}
+                className="zoom__button_close"
+              />
               <span
                 className="imageModal__zoom_left"
-                onClick={(e) => {e.stopPropagation(); handleSwitchLeft(zoomIndex)}}
+                onClick={e => {
+                  e.stopPropagation()
+                  handleSwitchLeft(zoomIndex)
+                }}
               >
                 <Image src="/arrowleft.png" width={30} height={30} alt="" />
               </span>
@@ -118,20 +119,20 @@ export default function ImageModal({ label, onClick, gallery }) {
               />
               <span
                 className="imageModal__zoom_right"
-                onClick={(e) =>{e.stopPropagation(); handleSwitchRight(zoomIndex)}}
+                onClick={e => {
+                  e.stopPropagation()
+                  handleSwitchRight(zoomIndex)
+                }}
               >
-              
-                <Image
-                  src="/arrowright.png"
-                  width={30}
-                  height={30}
-                  alt=""
-                />
+                <Image src="/arrowright.png" width={30} height={30} alt="" />
               </span>
             </>
           ) : (
             <>
-              <CloseButton onClick={closeFullScreen} className="zoom__button_close" />
+              <CloseButton
+                onClick={closeFullScreen}
+                className="zoom__button_close"
+              />
               <img
                 src={gallery[zoomIndex]}
                 className="fullscreen-modal-img"

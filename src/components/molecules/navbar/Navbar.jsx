@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-function Navbar() {
+function Navbar({ color }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 1024)
-  }, [])
+  const navbarColorClass = color === 'black' ? 'black' : 'white'
 
   const handleMenuIsOpen = () => {
     setMenuIsOpen(!menuIsOpen)
@@ -17,6 +15,10 @@ function Navbar() {
     setMenuIsOpen(false)
   }
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1024)
+  }, [])
+
   return (
     <>
       {isMobile ? (
@@ -25,14 +27,18 @@ function Navbar() {
           style={{ background: 'white', transition: 'all 0.5s ease-in-out' }}
         >
           <Link
-            href="/#films"
+            href="/director"
             className="navbar-link margin-top"
             onClick={handleClick}
           >
-            film
+            director
           </Link>
-          <Link href="/photos" className="navbar-link" onClick={handleClick}>
-            image
+          <Link
+            href="/cinematographer"
+            className="navbar-link"
+            onClick={handleClick}
+          >
+            cinematographer
           </Link>
           <Link href="/contact" className="navbar-link" onClick={handleClick}>
             contact
@@ -40,13 +46,16 @@ function Navbar() {
         </nav>
       ) : (
         <nav className="nav-desktop">
-          <Link href="/#films" className="navbar-link">
-            film
+          <Link href="/director" className={` navbar-link ${navbarColorClass}`}>
+            director
           </Link>
-          <Link href="/photos" className="navbar-link">
-            image
+          <Link
+            href="/cinematographer"
+            className={` navbar-link ${navbarColorClass}`}
+          >
+            cinematographer
           </Link>
-          <Link href="/contact" className="navbar-link">
+          <Link href="/contact" className={` navbar-link ${navbarColorClass}`}>
             contact
           </Link>
         </nav>

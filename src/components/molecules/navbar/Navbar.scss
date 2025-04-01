@@ -63,7 +63,7 @@ nav.active {
 }
 
 .navbar-link {
-  color: black;
+  color: white;
   font-size: 18px;
   display: block;
   text-decoration: none;
@@ -99,7 +99,10 @@ nav.active {
     display: none;
   }
 
-  .navbar-link {
+  .black {
     color: black;
+  }
+  .white {
+    color: white;
   }
 }
