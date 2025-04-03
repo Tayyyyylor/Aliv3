@@ -3,133 +3,14 @@
 .intro {
   left: 0;
   width: 100%;
-  z-index: 20;
-  height: 100%;
-  position: sticky;
-  color: rgb(255, 255, 255); /* Couleur du texte, ajustez selon votre design */
+  height: 100dvh;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 
-  @media screen and (min-width: $lg) {
-  }
-
-  &__video {
+  .video {
     width: 100%;
-    position: relative;
-    height: 100vh;
+    height: 100dvh !important;
+    background-color: black;
     object-fit: cover;
-    @media screen and (min-width: $lg) {
-      height: 100%;
-      cursor: pointer;
-    }
   }
-
-  &__button {
-    color: white;
-    font-size: 20px;
-    width: 20%;
-
-    @media screen and (min-width: $lg) {
-      width: 4%;
-    }
-
-    &_title {
-      font-size: 14px;
-      text-transform: uppercase;
-      font-family: lightFont;
-    }
-  }
-
-  &__none {
-    display: none;
-  }
-
-  &__cta_container {
-    position: absolute;
-    z-index: 20;
-    top: 80%;
-    left: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  }
-  &__logo {
-    color: white;
-    font-size: 50px;
-  }
-}
-
-.video {
-  width: 100%;
-  height: 90vh;
-  background-color: black;
-  object-fit: cover;
-  @media screen and (min-width: $lg) {
-    height: 100%;
-    object-fit: none;
-  }
-  @media screen and (min-width: $xlg) {
-    margin: none;
-    object-fit: contain;
-  }
-}
-
-.work {
-  width: 100%;
-  min-height: 90vh;
-  align-items: center;
-  display: flex;
-
-  @media screen and (min-width: $lg) {
-    margin: 0 auto;
-    margin-bottom: 200px;
-    padding: 0 10rem;
-  }
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2rem;
-    gap: 2rem;
-
-    @media screen and (min-width: $lg) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
-      gap: 40px; /* Espace entre les images */
-      margin-top: 50px;
-    }
-
-    &_content {
-      width: 100%;
-    }
-
-    &_size {
-      @media screen and (min-width: $lg) {
-        width: 100%;
-      }
-    }
-  }
-
-  &__modal {
-    display: block;
-    width: 100%;
-    position: fixed;
-    z-index: 22;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    @media screen and (min-width: $lg) {
-      width: 90%;
-    }
-
-    &__none {
-      display: none;
-    }
-  }
-}
-
-.video {
-  height: 100dvh !important;
 }

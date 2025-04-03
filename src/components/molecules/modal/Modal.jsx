@@ -1,21 +1,9 @@
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
-import React, { useEffect, useState } from 'react'
+import useMobile from '@/hooks/useMobile'
+import React from 'react'
 
-export default function Modal({
-  title,
-  desc,
-  onClick,
-  subtitle,
-  src,
-  srcMp4,
-  previewImg,
-  isScrollable,
-}) {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 1024)
-  }, [])
+export default function Modal({ onClick, src, previewImg }) {
+  const isMobile = useMobile()
 
   return (
     <>
@@ -30,19 +18,8 @@ export default function Modal({
             muted={!isMobile && true}
             controls
             loading="lazy"
-          >
-            <source src={src} type="video/webm" />
-            <source src={srcMp4} type="video/mp4" />
-          </video>
-        </div>
-
-        <div className={`modal__text ${isScrollable ? 'scrollable' : ''}`}>
-          <div className="blank"></div>
-          <div>
-            <h2 className="modal__title">{title}</h2>
-            <p className="modal__subtitle">{subtitle}</p>
-          </div>
-          <p className="modal__desc">{desc}</p>
+            src={src}
+          />
         </div>
       </section>
     </>

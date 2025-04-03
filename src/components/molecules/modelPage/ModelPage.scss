@@ -1,0 +1,22 @@
+.model {
+  position: relative;
+  @media screen and (min-width: 1024px) {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 200px;
+  }
+}
+
+.containerCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media screen and (min-width: 1024px) {
+    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 3rem;
+    padding: 1rem;
+  }
+}

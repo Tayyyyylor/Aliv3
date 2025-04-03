@@ -5,7 +5,10 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 900;
 
   @media screen and (min-width: $lg) {
@@ -14,42 +17,9 @@
     overflow-y: auto;
     height: 100%;
     padding: 2rem;
+    width: 70%;
     flex-direction: row-reverse;
-    width: 100%;
     max-height: 600px;
-  }
-
-  &__text {
-    background-color: white;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 2rem;
-    @media screen and (min-width: $lg) {
-      flex: 1;
-    }
-  }
-
-  &__title {
-    margin: 0;
-    @media screen and (min-width: $lg) {
-      margin-top: 70px;
-    }
-  }
-
-  &__subtitle {
-    font-family: lightFont;
-  }
-
-  &__desc {
-    font-family: thinFont;
-    text-align: justify;
-    margin-bottom: 20px;
-    @media screen and (min-width: $lg) {
-      margin: 0;
-    }
   }
 
   &__video {
@@ -61,7 +31,7 @@
 
   &__video_vid {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
     @media screen and (min-width: $lg) {
     }
@@ -78,13 +48,4 @@
       z-index: 3;
     }
   }
-}
-
-.scrollable {
-  overflow: scroll;
-}
-
-.blank {
-  background-color: white;
-  width: 100%;
 }
