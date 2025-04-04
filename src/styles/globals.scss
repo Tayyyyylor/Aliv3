@@ -7,12 +7,11 @@
 @use '../components/atoms/buttons/closeButton/CloseButton.scss' as *;
 @use '../components/atoms/backdrop/Backdrop.scss' as *;
 @use '../components/molecules/navbar/Navbar.scss' as *;
-@use '../components/molecules/cards/Cards.scss' as *;
+@use '../components/molecules/card/Card.scss' as *;
 @use '../components/molecules/modal/Modal.scss' as *;
-@use '../components/molecules/imageModal/ImageModal.scss' as *;
+@use '../components/molecules/modelPage/ModelPage.scss' as *;
 @use '../components/templates/Homepage/Homepage.scss' as *;
 @use '../components/templates/contact/ContactTemplate.scss' as *;
-@use '../components/templates/photos/Photos.scss' as *;
 @use './variables' as *;
 
 @font-face {
@@ -57,10 +56,6 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* couleur d'arrière-plan semi-transparente */
   z-index: 1; /* assure que l'overlay est au-dessus du reste du contenu */
-}
-
-.yellow-text {
-  color: $yellow;
 }
 
 a {

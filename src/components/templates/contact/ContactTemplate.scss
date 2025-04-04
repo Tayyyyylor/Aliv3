@@ -3,40 +3,12 @@
 .contact {
   display: flex;
   justify-content: center;
+  height: 100dvh;
+  flex-direction: column;
+  align-items: center;
+}
 
-  &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin-top: 56.5px;
-    @media screen and (min-width: $lg) {
-      margin-top: 71px;
-    }
-  }
-
-  &__img_container {
-    display: flex;
-    gap: 6rem;
-    flex-direction: column;
-    @media screen and (min-width: $lg) {
-      flex-direction: row;
-    }
-  }
-
-  &__img {
-    cursor: pointer;
-  }
-
-  &__mail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  &__alert {
-    font-size: 16px;
-    font-family: lightFont;
-  }
+.link {
+  color: black;
+  font-size: 24px;
 }

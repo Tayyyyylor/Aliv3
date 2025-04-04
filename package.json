@@ -17,6 +17,7 @@
     "@vercel/speed-insights": "^1.0.7",
     "axios": "^1.6.2",
     "clipboard": "^2.0.11",
+    "contentful": "^11.5.11",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.16.16",
     "gsap": "^3.12.5",

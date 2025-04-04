@@ -1,31 +1,10 @@
-import React, { useState } from 'react'
-import instagram from '../../../../public/instagram.png'
-import mail from '../../../../public/Mail.png'
-import behance from '../../../../public/BEHANCE.png'
+import React from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import LogoRs from '@/components/atoms/logoRs/LogoRs'
+import Link from 'next/link'
 
 export default function ContactTemplate() {
-  const [alert, setAlert] = useState(false)
-
   const myEmail = 'alibensays@gmail.com'
-
-  const handleEmailClick = () => {
-    navigator.clipboard.writeText(myEmail)
-    window.location.href = 'mailto:alibensays@gmail.com'
-    setAlert(true)
-    setTimeout(() => {
-      setAlert(false)
-    }, 2000)
-  }
-
-  const handleInstaClick = () => {
-    window.location.href = 'https://www.instagram.com/alibeniris/'
-  }
-  const handleBehanceClick = () => {
-    window.location.href = 'https://www.behance.net/alisays1/'
-  }
 
   useGSAP(() => {
     gsap.fromTo(
@@ -68,38 +47,16 @@ export default function ContactTemplate() {
 
   return (
     <main className="contact">
-      <div className="contact__container">
-        <div className="contact__img_container">
-          <div className="insta">
-            <LogoRs
-              src={instagram}
-              priority={false}
-              alt=""
-              className="contact__img"
-              onClick={handleInstaClick}
-            />
-          </div>
-          <div className="contact__mail mail">
-            <LogoRs
-              src={mail}
-              priority={false}
-              alt=""
-              className="contact__img"
-              onClick={handleEmailClick}
-            />
-            {alert && <p className="contact__alert">Email copied.</p>}
-          </div>
-          <div className="behance">
-            <LogoRs
-              src={behance}
-              priority={false}
-              alt=""
-              className="contact__img"
-              onClick={handleBehanceClick}
-            />
-          </div>
-        </div>
-      </div>
+      <Link
+        target="_blank"
+        href="https://www.instagram.com/alibeniris/"
+        className="link"
+      >
+        INSTAGRAM
+      </Link>
+      <Link href={`mailto:${myEmail}`} className="link">
+        {myEmail}
+      </Link>
     </main>
   )
 }

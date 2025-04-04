@@ -1,13 +1,13 @@
+import useMobile from '@/hooks/useMobile'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-function Navbar() {
+function Navbar({ color }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
+  const isMobile = useMobile()
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 1024)
-  }, [])
+  const navbarColorClass = color === 'black' ? 'black' : 'white'
+  console.log('navbarColorClass', navbarColorClass)
 
   const handleMenuIsOpen = () => {
     setMenuIsOpen(!menuIsOpen)
@@ -17,36 +17,52 @@ function Navbar() {
     setMenuIsOpen(false)
   }
 
+  const isBgTransparent = navbarColorClass === 'white'
+
   return (
     <>
       {isMobile ? (
         <nav
           className={`nav-mobile ${menuIsOpen ? 'active' : ''}`}
-          style={{ background: 'white', transition: 'all 0.5s ease-in-out' }}
+          style={{
+            background: isBgTransparent ? 'transparent' : 'white',
+            transition: 'all 0.5s ease-in-out',
+          }}
         >
           <Link
-            href="/#films"
-            className="navbar-link margin-top"
+            href="/director"
+            className={`navbar-link margin-top ${navbarColorClass}`}
             onClick={handleClick}
           >
-            film
+            director
           </Link>
-          <Link href="/photos" className="navbar-link" onClick={handleClick}>
-            image
+          <Link
+            href="/cinematographer"
+            className={`navbar-link ${navbarColorClass}`}
+            onClick={handleClick}
+          >
+            cinematographer
           </Link>
-          <Link href="/contact" className="navbar-link" onClick={handleClick}>
+          <Link
+            href="/contact"
+            className={`navbar-link ${navbarColorClass}`}
+            onClick={handleClick}
+          >
             contact
           </Link>
         </nav>
       ) : (
         <nav className="nav-desktop">
-          <Link href="/#films" className="navbar-link">
-            film
+          <Link href="/director" className={` navbar-link ${navbarColorClass}`}>
+            director
           </Link>
-          <Link href="/photos" className="navbar-link">
-            image
+          <Link
+            href="/cinematographer"
+            className={` navbar-link ${navbarColorClass}`}
+          >
+            cinematographer
           </Link>
-          <Link href="/contact" className="navbar-link">
+          <Link href="/contact" className={` navbar-link ${navbarColorClass}`}>
             contact
           </Link>
         </nav>
@@ -60,16 +76,16 @@ function Navbar() {
           className="nav-toggler"
         >
           <span
-            className={` line l1 ${menuIsOpen ? 'active' : 'line'}`}
-            style={{ background: 'black' }}
+            className={` line l1  ${menuIsOpen ? 'active' : 'line'}`}
+            style={{ background: navbarColorClass }}
           ></span>
           <span
-            className={`line l2 ${menuIsOpen ? 'active' : 'line'}`}
-            style={{ background: 'black' }}
+            className={`line l2  ${menuIsOpen ? 'active' : 'line'}`}
+            style={{ background: navbarColorClass }}
           ></span>
           <span
             className={` line l3 ${menuIsOpen ? 'active' : 'line'}`}
-            style={{ background: 'black' }}
+            style={{ background: navbarColorClass }}
           ></span>
         </button>
       ) : (
