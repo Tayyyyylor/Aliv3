@@ -39,6 +39,7 @@ export default function HomepageTemplate() {
           muted={showVideo ? false : true}
           controls={showVideo ? true : false}
           src={video}
+          style={{ zIndex: showVideo ? 22 : 1 }}
         />
       )}
     </main>
