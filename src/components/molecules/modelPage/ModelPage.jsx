@@ -43,7 +43,7 @@ export default function ModelPage({ data }) {
           <Cards
             key={index}
             src={card.fields?.coverVideo?.[0]?.original_secure_url}
-            srcImg={card.fields?.coverImg?.[0]?.original_secure_url}
+            srcImg={card.fields?.coverImg?.[0]?.secure_url}
             alt="toto"
             label={card.fields.title}
             subtitle={card.fields.desc}
