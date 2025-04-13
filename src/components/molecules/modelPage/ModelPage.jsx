@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import Cards from '../card/Card'
 import Modal from '../modal/Modal'
 import Backdrop from '@/components/atoms/backdrop/Backdrop'
@@ -6,6 +6,17 @@ import Backdrop from '@/components/atoms/backdrop/Backdrop'
 export default function ModelPage({ data }) {
   const [selectedProject, setSelectedProject] = useState(null)
   const [isOpen, setIsOpen] = useState(false)
+
+  console.log('data', data)
+
+  const sortedData = useMemo(() => {
+    if (!Array.isArray(data)) {
+      console.error('directorData is not an array :', data)
+      return []
+    }
+
+    return [...data].sort((a, b) => a.fields?.order - b.fields?.order)
+  }, [data])
 
   const handleClickOpenCard = projectIndex => {
     setIsOpen(true)
@@ -28,7 +39,7 @@ export default function ModelPage({ data }) {
   return (
     <main className="model">
       <section className="containerCards">
-        {data.map((card, index) => (
+        {sortedData.map((card, index) => (
           <Cards
             key={index}
             src={card.fields?.coverVideo?.[0]?.original_secure_url}
