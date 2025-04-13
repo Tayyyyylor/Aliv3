@@ -1,11 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Link from 'next/link'
+import client from '@/utils/contentful'
+import Image from 'next/image'
 
 export default function ContactTemplate() {
-  const myEmail = 'alibensays@gmail.com'
-  const phoneNumber = '+33650437067'
+  const [contact, setContact] = useState()
+
+  console.log('contact', contact)
+
+  useEffect(() => {
+    const fetchContact = async () => {
+      try {
+        const response = await client.getEntries({
+          content_type: 'contact',
+        })
+
+        if (response.items.length > 0) {
+          const contactData = response.items[0].fields
+          console.log('contactData', contactData)
+          setContact(contactData)
+        }
+      } catch (error) {
+        console.error('Error fetching data from Contentful:', error)
+      }
+    }
+
+    fetchContact()
+  }, [])
 
   useGSAP(() => {
     gsap.fromTo(
@@ -55,12 +78,23 @@ export default function ContactTemplate() {
       >
         INSTAGRAM
       </Link>
-      <Link href={`mailto:${myEmail}`} className="link">
-        {myEmail}
+      <Link href={`mailto:${contact?.mail}`} className="link">
+        {contact?.mail}
       </Link>
-      <Link href={`tel:${phoneNumber}`} className="link">
-        {phoneNumber}
+      <Link href={`tel:${contact?.tel}`} className="link">
+        {contact?.tel}
       </Link>
+      <div className="brands_container">
+        <h3 className="title2">They trusted me</h3>
+        <Image
+          alt="image brands"
+          src={contact?.brands[0]?.secure_url}
+          width={500}
+          height={500}
+          layout="intrinsic"
+          className="image"
+        />
+      </div>
     </main>
   )
 }
