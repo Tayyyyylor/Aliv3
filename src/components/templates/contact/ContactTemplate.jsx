@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 export default function ContactTemplate() {
   const myEmail = 'alibensays@gmail.com'
+  const phoneNumber = '+33650437067'
 
   useGSAP(() => {
     gsap.fromTo(
@@ -56,6 +57,9 @@ export default function ContactTemplate() {
       </Link>
       <Link href={`mailto:${myEmail}`} className="link">
         {myEmail}
+      </Link>
+      <Link href={`tel:${phoneNumber}`} className="link">
+        {phoneNumber}
       </Link>
     </main>
   )

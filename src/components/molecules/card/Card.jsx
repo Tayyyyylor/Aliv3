@@ -70,7 +70,7 @@ export default function Cards({
       </div>
       <div className="cards__text_container">
         <h3 className="cards__title">{label}</h3>
-        <p className="cards__subtitle">{subtitle}</p>
+        <p className="subtitle">{subtitle}</p>
       </div>
     </div>
   )

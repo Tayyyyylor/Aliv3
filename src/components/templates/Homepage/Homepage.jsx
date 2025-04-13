@@ -9,6 +9,8 @@ export default function HomepageTemplate() {
     setShowVideo(true)
   }
 
+  console.log('showVideo', showVideo)
+
   useEffect(() => {
     const fetchVideo = async () => {
       try {
@@ -28,7 +30,13 @@ export default function HomepageTemplate() {
     fetchVideo()
   }, [])
   return (
-    <main className="intro" onClick={handleWatch}>
+    <main
+      className={`intro ${!showVideo ? 'video_before_play' : ''}`}
+      onClick={handleWatch}
+      style={{
+        cursor: !showVideo ? "url('/test.png') 32 32, pointer" : 'auto',
+      }}
+    >
       {video && (
         <video
           className="video"
