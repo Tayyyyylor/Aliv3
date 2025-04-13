@@ -2,10 +2,12 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
 export default function Cards({
   src,
+  srcImg,
   alt,
   label,
   subtitle,
@@ -57,7 +59,8 @@ export default function Cards({
       onMouseLeave={() => setIsHover(false)}
     >
       <div className="cards__video_container">
-        <video
+        {isHover ? (
+          <video
           ref={videoRef}
           muted
           loading="lazy"
@@ -66,7 +69,10 @@ export default function Cards({
           className="video"
           src={src}
           alt={alt}
-        />
+          />
+        ) : (
+          <Image src={srcImg} alt={alt} />
+        )}
       </div>
       <div className="cards__text_container">
         <h3 className="cards__title">{label}</h3>
