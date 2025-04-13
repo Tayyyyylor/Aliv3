@@ -10,12 +10,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 900;
-
+  justify-content: center;
+    align-items: center;
   @media screen and (min-width: $lg) {
     display: flex;
     color: black;
     overflow-y: auto;
     height: 100%;
+  
     padding: 2rem;
     width: 70%;
   }

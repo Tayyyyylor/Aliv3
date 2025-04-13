@@ -71,7 +71,7 @@ export default function Cards({
           alt={alt}
           />
         ) : (
-          <Image src={srcImg} alt={alt} />
+          <Image src={srcImg} alt={alt} width={500} height={500} layout='intrinsic'/>
         )}
       </div>
       <div className="cards__text_container">
