@@ -61,17 +61,23 @@ export default function Cards({
       <div className="cards__video_container">
         {isHover ? (
           <video
-          ref={videoRef}
-          muted
-          loading="lazy"
-          preload="auto"
-          loop
-          className="video"
-          src={src}
-          alt={alt}
+            ref={videoRef}
+            muted
+            loading="lazy"
+            preload="auto"
+            loop
+            className="video"
+            src={src}
+            alt={alt}
           />
         ) : (
-          <Image src={srcImg} alt={alt} width={500} height={500} layout='intrinsic'/>
+          <Image
+            src={srcImg}
+            alt={alt}
+            width={200}
+            height={200}
+            className="image"
+          />
         )}
       </div>
       <div className="cards__text_container">
