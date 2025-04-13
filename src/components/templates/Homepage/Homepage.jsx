@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import client from '@/utils/contentful'
+import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
 
 export default function HomepageTemplate() {
   const [video, setVideo] = useState()
@@ -7,6 +8,10 @@ export default function HomepageTemplate() {
 
   const handleWatch = () => {
     setShowVideo(true)
+  }
+
+  const handleClose = () => {
+    setShowVideo(false)
   }
 
   console.log('showVideo', showVideo)
@@ -34,10 +39,12 @@ export default function HomepageTemplate() {
       className={`intro ${!showVideo ? 'video_before_play' : ''}`}
       onClick={handleWatch}
       style={{
-        cursor: !showVideo ? "url('/test.png') 32 32, pointer" : 'auto',
+        cursor: !showVideo ? "url('/play.png') 32 32, pointer" : 'auto',
       }}
     >
+      {showVideo && (<CloseButton onClick={handleClose} className="closeButton" />)}
       {video && (
+        <>
         <video
           className="video"
           preload="auto"
@@ -48,7 +55,8 @@ export default function HomepageTemplate() {
           controls={showVideo ? true : false}
           src={video}
           style={{ zIndex: showVideo ? 22 : 1 }}
-        />
+          />
+          </>
       )}
     </main>
   )

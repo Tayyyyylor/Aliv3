@@ -16,3 +16,16 @@
     object-fit: cover;
   }
 }
+
+
+.closeButton {
+  font-size: 60px;
+  background-color: transparent;
+  @media screen and (min-width: $lg) {
+    left: 1rem;
+    font-size: 60px;
+    top: 1rem;
+    position: absolute;
+    z-index: 999;
+  }
+}
