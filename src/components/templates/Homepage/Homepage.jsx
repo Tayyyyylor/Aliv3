@@ -42,21 +42,23 @@ export default function HomepageTemplate() {
         cursor: !showVideo ? "url('/play.png') 32 32, pointer" : 'auto',
       }}
     >
-      {showVideo && (<CloseButton onClick={handleClose} className="closeButton" />)}
+      {showVideo && (
+        <CloseButton onClick={handleClose} className="closeButton" />
+      )}
       {video && (
         <>
-        <video
-          className="video"
-          preload="auto"
-          autoPlay
-          loop={showVideo ? false : true}
-          playsInline
-          muted={showVideo ? false : true}
-          controls={showVideo ? true : false}
-          src={video}
-          style={{ zIndex: showVideo ? 22 : 1 }}
+          <video
+            className="video"
+            preload="auto"
+            autoPlay
+            loop={showVideo ? false : true}
+            playsInline
+            muted={showVideo ? false : true}
+            controls={showVideo ? true : false}
+            src={video}
+            style={{ zIndex: showVideo ? 22 : 1 }}
           />
-          </>
+        </>
       )}
     </main>
   )

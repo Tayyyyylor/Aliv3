@@ -74,10 +74,10 @@ export default function Cards({
           <Image
             src={srcImg}
             alt={alt}
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             className="image"
-            layout='intrinsic'
+            layout="intrinsic"
           />
         )}
       </div>
