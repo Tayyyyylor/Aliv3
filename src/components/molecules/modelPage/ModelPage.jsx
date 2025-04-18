@@ -20,7 +20,7 @@ export default function ModelPage({ data }) {
 
   const handleClickOpenCard = projectIndex => {
     setIsOpen(true)
-    setSelectedProject(data[projectIndex])
+    setSelectedProject(sortedData[projectIndex])
   }
   const handleClickCloseCard = () => {
     setSelectedProject(null)
@@ -32,9 +32,6 @@ export default function ModelPage({ data }) {
       handleClickCloseCard()
     }
   }
-
-  console.log('isOpen', isOpen)
-  console.log('selectedProject', selectedProject)
 
   return (
     <main className="model">
@@ -50,16 +47,16 @@ export default function ModelPage({ data }) {
             onClick={() => handleClickOpenCard(index)}
           />
         ))}
-        {isOpen && selectedProject && (
-          <>
-            <Backdrop onCancel={handleBackdropClick} />
-            <Modal
-              onClick={handleClickCloseCard}
-              src={selectedProject.fields?.coverVideo?.[0]?.original_secure_url}
-            />
-          </>
-        )}
       </section>
+      {isOpen && selectedProject && (
+        <>
+          <Backdrop onCancel={handleBackdropClick} />
+          <Modal
+            onClick={handleClickCloseCard}
+            src={selectedProject.fields?.video?.[0]?.original_secure_url}
+          />
+        </>
+      )}
     </main>
   )
 }
