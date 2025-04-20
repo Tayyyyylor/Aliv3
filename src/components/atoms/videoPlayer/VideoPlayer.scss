@@ -1,0 +1,14 @@
+.muxContainer {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+
+  .mux {
+    width: 100%;
+    height: 100dvh;
+    --controls: none;
+    --media-object-fit: cover;
+    --media-object-position: center;
+  }
+}

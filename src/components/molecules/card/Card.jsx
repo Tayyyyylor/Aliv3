@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import VideoPlayer from '@/components/atoms/videoPlayer/VideoPlayer'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
@@ -6,7 +7,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
 export default function Cards({
-  src,
+  playbackId,
   srcImg,
   alt,
   label,
@@ -60,16 +61,7 @@ export default function Cards({
     >
       <div className="cards__video_container">
         {isHover ? (
-          <video
-            ref={videoRef}
-            muted
-            loading="lazy"
-            preload="auto"
-            loop
-            className="video"
-            src={src}
-            alt={alt}
-          />
+          <VideoPlayer playbackId={playbackId} />
         ) : (
           <Image
             src={srcImg}
