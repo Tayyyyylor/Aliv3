@@ -1,25 +1,14 @@
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
-import useMobile from '@/hooks/useMobile'
+import VideoPlayer from '@/components/atoms/videoPlayer/VideoPlayer'
 import React from 'react'
 
-export default function Modal({ onClick, src, previewImg }) {
-  const isMobile = useMobile()
-
+export default function Modal({ onClick, playbackId }) {
   return (
     <>
       <section className="modal">
         <CloseButton onClick={onClick} className="modal__button" />
         <div className="modal__video">
-          <video
-            poster={previewImg}
-            className="modal__video_vid"
-            preload="auto"
-            autoPlay={!isMobile && true}
-            muted={!isMobile && true}
-            controls
-            loading="lazy"
-            src={src}
-          />
+          <VideoPlayer playbackId={playbackId} />
         </div>
       </section>
     </>
