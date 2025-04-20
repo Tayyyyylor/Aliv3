@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import client from '@/utils/contentful'
 import CloseButton from '@/components/atoms/buttons/closeButton/CloseButton'
+import VideoPlayer from '@/components/atoms/videoPlayer/VideoPlayer'
 
 export default function HomepageTemplate() {
   const [video, setVideo] = useState()
@@ -25,7 +26,7 @@ export default function HomepageTemplate() {
 
         if (response.items.length > 0) {
           const videoData = response.items[0].fields
-          setVideo(videoData?.video?.[0]?.original_secure_url)
+          setVideo(videoData?.video?.playbackId)
         }
       } catch (error) {
         console.error('Error fetching data from Contentful:', error)
@@ -46,19 +47,17 @@ export default function HomepageTemplate() {
         <CloseButton onClick={handleClose} className="closeButton" />
       )}
       {video && (
-        <>
-          <video
-            className="video"
-            preload="auto"
-            autoPlay
-            loop={showVideo ? false : true}
-            playsInline
-            muted={showVideo ? false : true}
-            controls={showVideo ? true : false}
-            src={video}
-            style={{ zIndex: showVideo ? 22 : 1 }}
-          />
-        </>
+        <VideoPlayer
+          className={
+            showVideo ? 'video mux--with-controls' : 'video mux--no-controls'
+          }
+          key={showVideo ? 'with-controls' : 'no-controls'}
+          playbackId={video}
+          muted={!showVideo}
+          controls={showVideo}
+          autoPlay={true}
+          nohotkeys={!showVideo}
+        />
       )}
     </main>
   )

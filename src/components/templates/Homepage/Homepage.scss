@@ -25,3 +25,17 @@
   position: absolute;
   z-index: 999;
 }
+
+.mux--no-controls::part(control-bar),
+.mux--no-controls::part(play-button),
+.mux--no-controls::part(timeline) {
+  display: none;
+}
+
+.mux--with-controls::part(control-bar),
+.mux--with-controls::part(play-button),
+.mux--with-controls::part(timeline) {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

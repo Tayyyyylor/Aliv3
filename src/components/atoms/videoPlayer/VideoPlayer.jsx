@@ -1,15 +1,26 @@
 import MuxPlayer from '@mux/mux-player-react'
 
-const VideoPlayer = ({ playbackId, onClick }) => {
+const VideoPlayer = ({
+  playbackId,
+  onClick,
+  autoPlay,
+  loop,
+  muted,
+  controls,
+  nohotkeys,
+  className,
+}) => {
   return (
     <div className="muxContainer" onClick={onClick}>
       <MuxPlayer
         playbackId={playbackId}
-        autoPlay
-        loop
-        muted
+        autoPlay={autoPlay}
+        loop={loop}
+        muted={muted}
         playsInline
-        className="mux"
+        controls={controls}
+        className={`mux ${className}`}
+        nohotkeys={nohotkeys}
       />
     </div>
   )
