@@ -15,9 +15,7 @@
     display: flex;
     color: black;
     overflow-y: auto;
-    height: 100%;
-
-    padding: 2rem;
+    height: 600px;
     width: 70%;
   }
 
@@ -26,6 +24,7 @@
     padding: 0 1rem;
     @media screen and (min-width: $lg) {
       padding: 0;
+      width: 100%;
     }
   }
 
@@ -39,7 +38,7 @@
 
   &__button {
     font-size: 60px;
-    background-color: transparent;
+    background-color: red;
     @media screen and (min-width: $lg) {
       left: 40px;
       font-size: 60px;

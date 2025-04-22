@@ -14,7 +14,7 @@ export default function Header() {
   const color = whiteHeaderPage ? 'black' : 'white'
 
   return (
-    <header className="header">
+    <header className={`header ${whiteHeaderPage ? 'header--white' : ''}`}>
       <Logo className="header__logo" color={color} />
       <Navbar color={color} />
     </header>
