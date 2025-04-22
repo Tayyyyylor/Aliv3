@@ -28,6 +28,7 @@
 
 .mux--no-controls::part(control-bar),
 .mux--no-controls::part(play-button),
+.mux--no-controls::part(range),
 .mux--no-controls::part(timeline) {
   display: none;
 }
