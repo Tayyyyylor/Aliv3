@@ -31,8 +31,10 @@
 .muxx--no-controls::part(control-bar),
 .muxx--no-controls::part(center-controls),
 .muxx--no-controls::part(play-button),
+.muxx--no-controls::part(button),
 .muxx--no-controls::part(range),
+.muxx--no-controls::part(top-controls),
 .muxx--no-controls::part(timeline) {
   display: none !important;
-  pointer-events: none;
+  pointer-events: none !important;
 }
