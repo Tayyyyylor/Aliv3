@@ -61,7 +61,15 @@ export default function Cards({
     >
       <div className="cards__video_container">
         {isHover ? (
-          <VideoPlayer playbackId={playbackId} />
+          <VideoPlayer
+            className="video muxx--no-controls"
+            key={isHover ? 'no-controls' : 'with-controls'}
+            playbackId={playbackId}
+            loop={true}
+            controls={false}
+            autoPlay={true}
+            muted={true}
+          />
         ) : (
           <Image
             src={srcImg}
