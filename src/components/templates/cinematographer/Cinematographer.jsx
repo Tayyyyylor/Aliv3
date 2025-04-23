@@ -5,8 +5,6 @@ import React, { useEffect, useState } from 'react'
 export default function Cinematographer() {
   const [data, setData] = useState()
 
-  console.log('data', data)
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -14,11 +12,8 @@ export default function Cinematographer() {
           content_type: 'cinematographer',
         })
 
-        console.log('response', response)
-
         if (response.items.length > 0) {
           const datas = response.items
-          console.log('datas', datas)
           setData(datas)
         }
       } catch (error) {

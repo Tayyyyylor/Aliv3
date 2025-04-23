@@ -15,8 +15,6 @@ export default function HomepageTemplate() {
     setShowVideo(false)
   }
 
-  console.log('showVideo', showVideo)
-
   useEffect(() => {
     const fetchVideo = async () => {
       try {
@@ -44,7 +42,7 @@ export default function HomepageTemplate() {
       }}
     >
       {showVideo && (
-        <CloseButton onClick={handleClose} className="closeButton" />
+        <CloseButton onClick={handleClose} className="closeButtonn" />
       )}
       {video && (
         <VideoPlayer

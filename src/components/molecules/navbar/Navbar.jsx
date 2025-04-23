@@ -7,7 +7,6 @@ function Navbar({ color }) {
   const isMobile = useMobile()
 
   const navbarColorClass = color === 'black' ? 'black' : 'white'
-  console.log('navbarColorClass', navbarColorClass)
 
   const handleMenuIsOpen = () => {
     setMenuIsOpen(!menuIsOpen)

@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function CloseButton({ className, onClick }) {
   const handleClick = e => {
-    e.stopPropagation() // ⛔ empêche la remontée vers <main>
-    onClick?.(e) // ✅ exécute la fermeture
+    e.stopPropagation()
+    onClick?.(e)
   }
   return (
     <div className={className}>
