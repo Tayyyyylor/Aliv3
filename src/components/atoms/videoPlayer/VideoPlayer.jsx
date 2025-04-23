@@ -18,6 +18,7 @@ const VideoPlayer = ({
         loop={loop}
         muted={muted}
         playsInline
+        poster=""
         controls={controls}
         className={`mux ${className}`}
         nohotkeys={nohotkeys}
