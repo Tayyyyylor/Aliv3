@@ -55,6 +55,7 @@ export default function HomepageTemplate() {
           controls={showVideo}
           autoPlay={true}
           nohotkeys={!showVideo}
+          poster=""
         />
       )}
     </main>

@@ -9,6 +9,7 @@ const VideoPlayer = ({
   controls,
   nohotkeys,
   className,
+  poster
 }) => {
   return (
     <div className="muxContainer" onClick={onClick}>
@@ -18,7 +19,7 @@ const VideoPlayer = ({
         loop={loop}
         muted={muted}
         playsInline
-        poster=""
+        poster={poster}
         controls={controls}
         className={`mux ${className}`}
         nohotkeys={nohotkeys}
