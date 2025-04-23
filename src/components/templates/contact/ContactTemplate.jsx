@@ -8,8 +8,6 @@ import Image from 'next/image'
 export default function ContactTemplate() {
   const [contact, setContact] = useState()
 
-  console.log('contact', contact)
-
   useEffect(() => {
     const fetchContact = async () => {
       try {
@@ -19,7 +17,6 @@ export default function ContactTemplate() {
 
         if (response.items.length > 0) {
           const contactData = response.items[0].fields
-          console.log('contactData', contactData)
           setContact(contactData)
         }
       } catch (error) {
@@ -69,6 +66,10 @@ export default function ContactTemplate() {
       )
   })
 
+  const previewImageUrl = contact?.image?.fields?.file?.url
+    ? `https:${contact?.image?.fields?.file?.url}`
+    : ''
+
   return (
     <main className="contact">
       <Link
@@ -88,7 +89,7 @@ export default function ContactTemplate() {
         <h3 className="title2">They trusted me</h3>
         <Image
           alt="image brands"
-          src={contact?.brands[0]?.secure_url}
+          src={previewImageUrl}
           width={500}
           height={500}
           layout="intrinsic"

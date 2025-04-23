@@ -7,10 +7,6 @@ export default function ModelPage({ data }) {
   const [selectedProject, setSelectedProject] = useState(null)
   const [isOpen, setIsOpen] = useState(false)
 
-  console.log('selectedProject', selectedProject)
-
-  console.log('data', data)
-
   const sortedData = useMemo(() => {
     if (!Array.isArray(data)) {
       console.error('directorData is not an array :', data)
@@ -43,7 +39,6 @@ export default function ModelPage({ data }) {
             ? `https:${card.fields?.poster?.fields?.file?.url}`
             : ''
 
-          console.log('previewImageUrl', previewImageUrl)
           return (
             <Cards
               key={index}
@@ -60,10 +55,7 @@ export default function ModelPage({ data }) {
       {isOpen && selectedProject && (
         <>
           <Backdrop onCancel={handleBackdropClick} />
-          <Modal
-            onClick={handleClickCloseCard}
-            playbackId={selectedProject?.fields?.video?.playbackId}
-          />
+          <Modal playbackId={selectedProject?.fields?.video?.playbackId} />
         </>
       )}
     </main>

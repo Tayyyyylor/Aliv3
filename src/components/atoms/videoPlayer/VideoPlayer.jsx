@@ -21,6 +21,7 @@ const VideoPlayer = ({
         controls={controls}
         className={`mux ${className}`}
         nohotkeys={nohotkeys}
+        accentColor="black"
       />
     </div>
   )
