@@ -69,6 +69,7 @@ export default function Cards({
             controls={false}
             autoPlay={true}
             muted={true}
+            poster=""
           />
         ) : (
           <Image
